@@ -3,26 +3,29 @@
 		<h5 class="mb-5 font-bold text-2xl"># Button Component</h5>
 		<p class="text-xl tracking-wide">Use UI Components custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
 		<div class="flex w-full flex-wrap border mt-2">
-			<div class="p-2 w-full md:w-1/5">
+			<div class="p-2 w-full md:w-1/4">
 				<Button class="w-full" size="sm" type="primary" txt="Primary"></Button>
 			</div>
-			<div class="p-2 w-full md:w-1/5">
-				<Button class="w-full" size="sm" type="danger" txt="danger"></Button>
+			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" size="sm" type="danger" txt="Danger"></Button>
 			</div>
-			<div class="p-2 w-full md:w-1/5">
-				<Button class="w-full" size="sm" type="success" txt="success"></Button>
+			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" size="sm" type="success" txt="Success"></Button>
 			</div>
-			<div class="p-2 w-full md:w-1/5">
-				<Button class="w-full" size="sm" type="warning" txt="warning"></Button>
+			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" size="sm" type="warning" txt="Warning"></Button>
 			</div>
-			<div class="p-2 w-full md:w-1/5">
-				<Button class="w-full" size="sm" type="dark" txt="dark"></Button>
+			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" size="sm" type="dark" txt="Dark"></Button>
 			</div>
-			<div class="p-2 w-full md:w-1/5">
-				<Button class="w-full" size="sm" type="light" txt="light"></Button>
+			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" size="sm" type="light" txt="Light"></Button>
 			</div>
-			<div class="p-2 w-full md:w-1/5">
-				<Button class="w-full" size="sm" type="custom" txt="Custom" bg="blue-800" p="3" ring="blue-400" color="white" size-ring="2"></Button>
+			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" size="sm" type="secondary" txt="Secondary"></Button>
+			</div>
+			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" size="sm" type="custom" txt="Custom" bg="blue-800" p="3" ring="blue-600" color="white" size-ring="4"></Button>
 			</div>
 		</div>
 	</div>
