@@ -1,40 +1,90 @@
 <template>
-	<button :class="clasess">{{title}}</button>
+	<button :type="role ? role: 'button'" :class="cls">{{txt}}</button>
 </template>
 <script>
+const list = [
+	{type: 'primary', cls: 'bg-blue-500 text-white focus:outline-none focus:ring-4 focus:ring-blue-200 text-center'},
+	{type: 'danger', cls: 'bg-red-500 text-white focus:outline-none focus:ring-4 focus:ring-red-200 text-center'},
+	{type: 'success', cls: 'bg-green-500 text-white focus:outline-none focus:ring-4 focus:ring-green-200 text-center'},
+	{type: 'warning', cls: 'bg-yellow-500 text-white focus:outline-none focus:ring-4 focus:ring-yellow-200 text-center'},
+	{type: 'dark', cls: 'bg-black text-white focus:outline-none focus:ring-4 focus:ring-gray-600'},
+	{type: 'light', cls: 'bg-white text-black focus:outline-none focus:ring-4 focus:ring-gray-100 border border-gray-200 text-center'},
+]
 export default{
-	name: 'Button',
+	name: 'Button UI',
 	props: {
-		title: String,
-		classNames: String,
-		p: String,
-		bg: String,
-		color: String,
-		ring: String,
+		type: {
+			type: String, required: true
+		},
+		txt: {
+			type: String, required: true
+		},
+		bg: {
+			type: String, required: false
+		},
+		color: {
+			type: String, required: false
+		},
+		p: {
+			type: String, required: false
+		},
+		ring: {
+			type: String, required: false
+		},
+		sizeRing: {
+			type: String, required: false
+		},
+		size: {
+			type: String, required: false
+		},
+		role: {
+			type: String, required: false
+		},
 	},
 	data(){
 		return{
-			clasess: ' focus:outline-none'
+			cls: ' text-center focus:outline-none'
 		}
 	},
 	beforeMount(){
-		if(this.bg){
-			this.clasess = this.clasess.replace('', ' bg-' + this.bg)
-		}
-		if(this.color){
-			this.clasess = this.clasess.replace('', ' text-' + this.color)
-		}
-		if(this.p){
-			this.clasess = this.clasess.replace('', ' p-' + this.p)
-		}
-		if(this.ring){
-			this.clasess = this.clasess.replace('', ' focus:ring focus:ring-' + this.ring)
-		}
-		if(this.classNames){
-			this.clasess = this.clasess.replace('', ' ' + this.classNames)
-		}
-		if(!this.classNames){
-			this.clasess = this.clasess.replace('', ' p-3 border focus:ring focus:ring-gray-100')
+		if(this.type !== 'custom'){
+			for (var i = 0; i < list.length; i++) {
+				if(list[i].type == this.type){
+					if(this.size == 'sm'){
+						this.cls = list[i].cls + ' p-2'
+					}
+					if(this.size == 'md'){
+						this.cls = list[i].cls + ' p-3'
+					}
+					if(this.size == 'lg'){
+						this.cls = list[i].cls + ' p-4'
+					}
+					else{
+						this.cls = list[i].cls + ' p-3'
+					}
+				}
+			}
+		}else{
+			if(this.bg){
+				this.cls = this.cls.replace('', ' bg-' + this.bg)
+			}
+			if(this.color){
+				this.cls = this.cls.replace('', ' text-' + this.color)
+			}
+			if(this.p){
+				this.cls = this.cls.replace('', ' p-' + this.p)
+			}
+			if(this.ring){
+				this.cls = this.cls.replace('', ' focus:ring-' + this.ring)
+			}
+			if(this.sizeRing){
+				if(this.sizeRing == "1"){
+					this.cls = this.cls.replace('', ' focus:ring')
+				}
+				else{
+					this.cls = this.cls.replace('', ' focus:ring-' + this.sizeRing)
+				}
+			}
 		}
 	}
 }

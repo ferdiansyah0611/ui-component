@@ -6,7 +6,7 @@
 </template>
 <script>
 export default{
-	name: 'File',
+	name: 'File UI',
 	emits: ['update:file'],
 	props: {
 		file: {

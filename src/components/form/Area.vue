@@ -3,7 +3,7 @@
 </template>
 <script>
 export default{
-	name: 'Area',
+	name: 'Area UI',
 	emits: ['update:txt'],
 	props: {
 		txt: {
