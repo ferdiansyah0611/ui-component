@@ -83,20 +83,8 @@ export default{
 			this.bg ? this.cls = this.cls.replace('', ' bg-' + this.bg): this.cls = this.cls.replace('', ' bg-white')
 			this.color ? this.cls = this.cls.replace('', ' text-' + this.color): this.cls = this.cls.replace('', ' text-white')
 			this.p ? this.cls = this.cls.replace('', ' p-' + this.p): this.cls = this.cls.replace('', ' p-3')
-			if(this.p){
-				this.cls = this.cls.replace('', ' p-' + this.p)
-			}
-			if(this.ring){
-				this.cls = this.cls.replace('', ' focus:ring-' + this.ring)
-			}
-			if(this.sizeRing){
-				if(this.sizeRing == "1"){
-					this.cls = this.cls.replace('', ' focus:ring')
-				}
-				else{
-					this.cls = this.cls.replace('', ' focus:ring-' + this.sizeRing)
-				}
-			}
+			this.ring ? this.cls = this.cls.replace('', ' focus:ring-' + this.ring): this.cls = this.cls.replace('', ' focus:ring-gray-200')
+			this.sizeRing ? this.cls = this.cls.replace('', ' focus:ring-' + this.sizeRing): this.cls = this.cls.replace('', ' focus:ring')
 		}
 	},
 	mounted(){
