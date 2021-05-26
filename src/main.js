@@ -11,7 +11,7 @@ import Area from '@/components/form/Area'
 import Select from '@/components/form/Select'
 import File from '@/components/form/File'
 import Alert from '@/components/Alert'
-import TextCard from '@/components/card/Text'
+import Cards from '@/components/Card'
 
 const app = createApp(App)
 app.component('Navbar', Navbar)
@@ -22,6 +22,6 @@ app.component('Area', Area)
 app.component('Select', Select)
 app.component('File', File)
 app.component('Alert', Alert)
-app.component('TextCard', TextCard)
+app.component('Cards', Cards)
 app.use(router)
 app.mount('#app')

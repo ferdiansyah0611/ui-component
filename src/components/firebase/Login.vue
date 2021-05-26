@@ -7,7 +7,7 @@
 </template>
 <script>
 export default{
-	name: 'Login UI',
+	name: 'Login UI Firebase',
 	props: {
 		config: {,
 			type: Object

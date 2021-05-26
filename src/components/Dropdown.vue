@@ -3,8 +3,11 @@
 		<a @click="action" href="/" :class="cls + ' w-full'">
 			{{txt}}
 		</a>
-		<div :class="clasess">
+		<div v-if="link" :class="clasess">
 			<router-link v-for="(data, key) in link" v-bind:key="key" :to="{path: data.link}" class="p-2 w-full hover:bg-gray-100 transition-all duration-200 z-10 bg-white">{{data.name}}</router-link>
+		</div>
+		<div v-else :class="clasess">
+			<slot></slot>
 		</div>
 	</div>
 </template>
@@ -22,7 +25,7 @@ export default{
 	name: 'Dropdown UI',
 	props: {
 		link: {
-			type: Array, required: true
+			type: Array, required: false
 		},
 
 		type: {
@@ -76,6 +79,7 @@ export default{
 					else{
 						this.cls = list[i].cls + ' p-3'
 					}
+					break;
 				}
 			}
 		}else{

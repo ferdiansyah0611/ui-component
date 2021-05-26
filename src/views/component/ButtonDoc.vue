@@ -4,28 +4,30 @@
 		<p class="text-xl tracking-wide">Use UI Components custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
 		<div class="flex w-full flex-wrap border mt-2">
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="primary" txt="Primary"></Button>
+				<Button class="w-full" size="sm" type="primary">Primary</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="danger" txt="Danger"></Button>
+				<Button class="w-full" size="sm" type="danger">Danger</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="success" txt="Success"></Button>
+				<Button class="w-full" size="sm" type="success">Success</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="warning" txt="Warning"></Button>
+				<Button class="w-full" size="sm" type="warning">Warning</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="dark" txt="Dark"></Button>
+				<Button class="w-full" size="sm" type="dark">Dark</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="light" txt="Light"></Button>
+				<Button class="w-full" size="sm" type="light">Light</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="secondary" txt="Secondary"></Button>
+				<Button class="w-full" size="sm" type="secondary">Secondary</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="custom" txt="Custom" bg="blue-800" p="3" ring="blue-600" color="white" size-ring="4"></Button>
+				<Button class="w-full" size="sm" type="custom" bg="blue-800" p="3" ring="blue-600" color="white" size-ring="4">
+					Custom
+				</Button>
 			</div>
 		</div>
 	</div>
@@ -40,10 +42,6 @@
 		<div class="w-full border-b py-2">
 			<h5 class="font-medium mb-1 text-sm md:text-base"><code>type (String)</code></h5>
 			<p class="text-sm">A type of button. List type: error, success, warning, dark, light, secondary, and custom.</p>
-		</div>
-		<div class="w-full border-b py-2">
-			<h5 class="font-medium mb-1 text-sm md:text-base"><code>txt (String)</code></h5>
-			<p class="text-sm">Text show in button component.</p>
 		</div>
 		<div class="w-full border-b py-2">
 			<h5 class="font-medium mb-1 text-sm md:text-base"><code>bg (String)</code></h5>
@@ -87,7 +85,7 @@ export default{
 	<span class="text-green-500">size</span>="sm"
 	<span class="text-green-500">type</span>="success"
 	<span class="text-green-500">txt</span>="Uploading successfuly"
-/>
+>Uploading successfuly<<span class="text-red-500">/Button</span>>
 <<span class="text-red-500">Button</span>
 	<span class="text-green-500">bg</span>="blue-800"
 	<span class="text-green-500">type</span>="custom"
@@ -95,8 +93,7 @@ export default{
 	<span class="text-green-500">p</span>="4"
 	<span class="text-green-500">ring</span>="blue-400"
 	<span class="text-green-500">size-ring</span>="2"
-	<span class="text-green-500">txt</span>="Uploading successfuly"
-/>`
+>Uploading successfuly<<span class="text-red-500">/Button</span>>`
 			}
 		}
 	}

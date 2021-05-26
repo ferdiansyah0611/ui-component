@@ -5,35 +5,51 @@
 		<div class="w-full flex-wrap flex mt-2 sm:mt-0">
 			<div class="w-full md:w-2/4 xl:w-1/4 p-1">
 				<p class="w-full mb-2 mt-2 text-sm sm:text-base">Primary Type</p>
-				<Alert :open="true" type="primary" txt="Uploading file successfuly."></Alert>
+				<Alert :open="true" type="primary">
+					Uploading file successfuly.
+				</Alert>
 			</div>
 			<div class="w-full md:w-2/4 xl:w-1/4 p-1">
 				<p class="w-full mb-2 mt-2 text-sm sm:text-base">Error Type</p>
-				<Alert :open="true" type="danger" txt="Unexpected token ,"></Alert>
+				<Alert :open="true" type="danger">
+					Unexpected token ,
+				</Alert>
 			</div>
 			<div class="w-full md:w-2/4 xl:w-1/4 p-1">
 				<p class="w-full mb-2 mt-2 text-sm sm:text-base">Success Type</p>
-				<Alert :open="true" type="success" txt="Uploading file successfuly."></Alert>
+				<Alert :open="true" type="success">
+					Uploading file successfuly.
+				</Alert>
 			</div>
 			<div class="w-full md:w-2/4 xl:w-1/4 p-1">
 				<p class="w-full mb-2 mt-2 text-sm sm:text-base">Warning Type</p>
-				<Alert :open="true" type="warning" txt="[Warn]: Unhandled error"></Alert>
+				<Alert :open="true" type="warning">
+					[Warn]: Unhandled error
+				</Alert>
 			</div>
 			<div class="w-full md:w-2/4 xl:w-1/4 p-1">
 				<p class="w-full mb-2 mt-2 text-sm sm:text-base">Dark Type</p>
-				<Alert :open="true" type="dark" txt="Uploading file successfuly."></Alert>
+				<Alert :open="true" type="dark">
+					Uploading file successfuly.
+				</Alert>
 			</div>
 			<div class="w-full md:w-2/4 xl:w-1/4 p-1">
 				<p class="w-full mb-2 mt-2 text-sm sm:text-base">Light Type</p>
-				<Alert :open="true" type="light" txt="Uploading file successfuly."></Alert>
+				<Alert :open="true" type="light">
+					Uploading file successfuly.
+				</Alert>
 			</div>
 			<div class="w-full md:w-2/4 xl:w-1/4 p-1">
 				<p class="w-full mb-2 mt-2 text-sm sm:text-base">Secondary Type</p>
-				<Alert :open="true" type="secondary" txt="Uploading file successfuly."></Alert>
+				<Alert :open="true" type="secondary">
+					Uploading file successfuly.
+				</Alert>
 			</div>
 			<div class="w-full md:w-2/4 xl:w-1/4 p-1">
 				<p class="w-full mb-2 mt-2 text-sm sm:text-base">Custom Type</p>
-				<Alert :open="true" type="custom" txt="Uploading file successfuly." bg="indigo-600" color="white"></Alert>
+				<Alert :open="true" type="custom" bg="indigo-600" color="white">
+					Uploading file successfuly.
+				</Alert>
 			</div>
 		</div>
 	</div>
@@ -53,10 +69,6 @@
 			<h5 class="font-medium mb-1"><code>type (String)</code></h5>
 			<p class="text-sm">A type of alert. List type: error, success, warning, dark, light, secondary, and custom.</p>
 		</div>
-		<div class="w-full border-b py-2">
-			<h5 class="font-medium mb-1"><code>txt (String)</code></h5>
-			<p class="text-sm">Text show in alert component.</p>
-		</div>
 	</div>
 </template>
 <script>
@@ -70,8 +82,7 @@ export default{
 				one: `<<span class="text-red-500">Alert</span>
 	:<span class="text-green-500">open</span>="true"
 	<span class="text-green-500">type</span>="error"
-	<span class="text-green-500">txt</span>="Unexpected token ,"
-/>`
+>Uploading file successfuly.<<span class="text-red-500">/Alert</span>>`
 			}
 		}
 	}

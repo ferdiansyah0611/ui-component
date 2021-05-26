@@ -46,7 +46,7 @@
 <span class="text-red-400">import</span> Select <span class="text-red-400">from</span> <span class="text-yellow-600">'@/components/form/Select'</span>
 <span class="text-red-400">import</span> File <span class="text-red-400">from</span> <span class="text-yellow-600">'@/components/form/File'</span>
 <span class="text-red-400">import</span> Alert <span class="text-red-400">from</span> <span class="text-yellow-600">'@/components/Alert'</span>
-<span class="text-red-400">import</span> TextCard <span class="text-red-400">from</span> <span class="text-yellow-600">'@/components/card/Text'</span>
+<span class="text-red-400">import</span> Cards <span class="text-red-400">from</span> <span class="text-yellow-600">'@/components/Card'</span>
 <span class="text-blue-400">const</span> app = createApp({})
 app.component('Navbar', Navbar)
 app.component('Dropdown', Dropdown)
@@ -56,7 +56,7 @@ app.component('Area', Area)
 app.component('Select', Select)
 app.component('File', File)
 app.component('Alert', Alert)
-app.component('TextCard', TextCard)
+app.component('Cards', Cards)
 </code>
 	</pre>
 	<div class="bg-gray-100 p-3 mb-2">
