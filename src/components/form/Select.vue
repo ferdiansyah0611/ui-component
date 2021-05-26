@@ -1,8 +1,9 @@
 <template>
-	<select data-ui="select" @change="handle" class="border p-3 focus:outline-none w-full focus:ring focus:ring-gray-100 cursor-pointer bg-white">
+	<select :disabled="disabled ? true: false" @change="handle" class="border p-3 focus:outline-none w-full focus:ring focus:ring-gray-100 bg-white">
 		<option :value="defaultValue" selected>{{defaultValue}}</option>
 		<option v-for="(data, key) in option" v-bind:key="key" :value="data">{{data}}</option>
 	</select>
+	<p v-if="help" class="text-sm p-1 text-gray-500">{{help}}</p>
 </template>
 <script>
 export default{
@@ -16,7 +17,15 @@ export default{
 		defaultValue: {
 			type: String,
 			required: true
-		}
+		},
+		disabled: {
+			type: Boolean,
+			required: false
+		},
+		help: {
+			type: String,
+			required: false
+		},
 	},
 	methods: {
 		handle(e){

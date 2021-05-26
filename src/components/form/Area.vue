@@ -1,5 +1,6 @@
 <template>
-	<textarea data-ui="area" :placeholder="place" @input="handle" class="border p-3 focus:outline-none w-full focus:ring focus:ring-gray-100" :style="{minHeight: min ? min: 40 + 'px', maxHeight: max ? max: 100 + 'px'}"></textarea>
+	<textarea :disabled="disabled ? true: false" :placeholder="place" @input="handle" class="border p-3 focus:outline-none w-full focus:ring focus:ring-gray-100" :style="{minHeight: min ? min: 40 + 'px', maxHeight: max ? max: 100 + 'px'}"></textarea>
+	<p v-if="help" class="text-sm p-1 text-gray-500">{{help}}</p>
 </template>
 <script>
 export default{
@@ -19,6 +20,14 @@ export default{
 			required: false
 		},
 		max: {
+			type: String,
+			required: false
+		},
+		disabled: {
+			type: Boolean,
+			required: false
+		},
+		help: {
 			type: String,
 			required: false
 		},
