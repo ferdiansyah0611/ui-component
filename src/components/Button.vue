@@ -50,15 +50,19 @@ export default{
 				if(list[i].type == this.type){
 					if(this.size == 'sm'){
 						this.cls = list[i].cls + ' p-2'
+						break;
 					}
 					if(this.size == 'md'){
 						this.cls = list[i].cls + ' p-3'
+						break;
 					}
 					if(this.size == 'lg'){
 						this.cls = list[i].cls + ' p-4'
+						break;
 					}
 					else{
 						this.cls = list[i].cls + ' p-3'
+						break;
 					}
 				}
 			}
