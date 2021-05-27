@@ -1,5 +1,12 @@
 <template>
-	<input :disabled="disabled ? true: false" :placeholder="place" :value="txt" @input="handle" :type="type" class="border p-3 focus:outline-none w-full focus:ring focus:ring-gray-100">
+	<input
+		:disabled="disabled ? true: false"
+		:placeholder="place" :value="txt"
+		@input="handle"
+		:type="type"
+		:required="required ? true: false"
+		:autocomplete="autoComplete ? 'on': 'off'"
+		class="border p-3 focus:outline-none w-full focus:ring focus:ring-gray-100">
 	<p v-if="help" class="text-sm p-1 text-gray-500">{{help}}</p>
 </template>
 <script>
@@ -25,6 +32,14 @@ export default{
 		},
 		help: {
 			type: String,
+			required: false
+		},
+		required: {
+			type: Boolean,
+			required: false
+		},
+		autoComplete: {
+			type: Boolean,
 			required: false
 		},
 	},
