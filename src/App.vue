@@ -3,7 +3,6 @@
 		<template v-slot:navs>
 			<div class="w-1/2 flex justify-start">
 				<router-link class="p-4 font-bold hover:bg-blue-600" to="/">UI Component</router-link>
-				<router-link class="p-4 font-bold hover:bg-blue-600" to="/">Getting Started</router-link>
 				<router-link class="p-4 font-bold hover:bg-blue-600" to="/">Docs</router-link>
 			</div>
 			<div class="w-1/2 flex justify-end">
