@@ -7,6 +7,9 @@ import ButtonDoc from '../views/component/ButtonDoc.vue'
 import CardDoc from '../views/component/CardDoc.vue'
 import DropdownDoc from '../views/component/DropdownDoc.vue'
 import FormDoc from '../views/component/FormDoc.vue'
+import NavDoc from '../views/component/NavDoc.vue'
+import SidebarDoc from '../views/component/SidebarDoc.vue'
+import FirebaseLoginDoc from '../views/page/FirebaseLoginDoc.vue'
 
 const routes = [
   {
@@ -43,6 +46,21 @@ const routes = [
     path: '/component/form',
     name: 'FormDoc',
     component: FormDoc
+  },
+  {
+    path: '/component/nav',
+    name: 'NavDoc',
+    component: NavDoc
+  },
+  {
+    path: '/component/sidebar',
+    name: 'SidebarDoc',
+    component: SidebarDoc
+  },
+  {
+    path: '/page/firebase-login',
+    name: 'FirebaseLoginDoc',
+    component: FirebaseLoginDoc
   },
 ]
 

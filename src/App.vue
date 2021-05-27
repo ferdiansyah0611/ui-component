@@ -1,5 +1,5 @@
 <template>
-	<Navbars type="top-primary">
+	<Navbar type="top-fixed-primary">
 		<template v-slot:navs>
 			<div class="w-1/2 flex justify-start">
 				<router-link class="p-4 font-bold hover:bg-blue-600" to="/">UI Component</router-link>
@@ -34,7 +34,7 @@
 				</Sidebar>
 			</div>
 		</template>
-	</Navbars>
+	</Navbar>
 	<div class="mt-14 p-3 sm:p-8">
 		<div class="flex flex-wrap">
 			<div class="w-full md:w-1/5 md:fixed left-0 bg-white md:ml-1 md:z-10">
@@ -47,8 +47,10 @@
 					<router-link to="/component/card" class="p-3 py-1 hover:underline w-full">Card</router-link>
 					<router-link to="/component/dropdown" class="p-3 py-1 hover:underline w-full">Dropdown</router-link>
 					<router-link to="/component/form" class="p-3 py-1 hover:underline w-full">Form</router-link>
-					<router-link to="/component/form" class="p-3 py-1 hover:underline w-full">Nav</router-link>
-					<router-link to="/component/form" class="p-3 py-1 hover:underline w-full">Sidebar</router-link>
+					<router-link to="/component/nav" class="p-3 py-1 hover:underline w-full">Nav</router-link>
+					<router-link to="/component/sidebar" class="p-3 py-1 hover:underline w-full">Sidebar</router-link>
+					<h5 class="font-bold p-3">Page</h5>
+					<router-link to="/page/firebase-login" class="p-3 py-1 hover:underline w-full">Firebase > Login</router-link>
 				</div>
 				<h5 class="text-center mt-2 hidden md:block">&copy; {{new Date().getFullYear()}} ferdiansyah0611</h5>
 			</div>
@@ -60,13 +62,7 @@
 	</div>
 </template>
 <script>
-import Navbars from '@/components/Navbars'
-import Sidebar from '@/components/Sidebar'
 export default{
 	name: 'App',
-	components: {
-		Navbars,
-		Sidebar
-	}
 }
 </script>
