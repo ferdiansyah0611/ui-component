@@ -12,6 +12,7 @@ import Select from '@/components/form/Select'
 import File from '@/components/form/File'
 import Alert from '@/components/Alert'
 import Cards from '@/components/Card'
+import Sidebar from '@/components/Sidebar'
 
 const app = createApp(App)
 app.component('Navbar', Navbar)
@@ -23,5 +24,6 @@ app.component('Select', Select)
 app.component('File', File)
 app.component('Alert', Alert)
 app.component('Cards', Cards)
+app.component('Sidebar', Sidebar)
 app.use(router)
 app.mount('#app')

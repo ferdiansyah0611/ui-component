@@ -2,7 +2,7 @@
 	<a @click="action" href="/" :class="'p-' + p">
 		<slot name="icon"></slot>
 	</a>
-	<div class="menu">
+	<div :id="id" class="menu">
 		<div @click="action" class="opacity bg-black bg-opacity-50 h-screen top-0 left-0 w-full z-30 fixed overflow-auto cursor-pointer hidden"></div>
 		<div :class="sidebar.classes">
 			<div class="bg-white w-48 h-screen overflow-auto text-black">
@@ -31,6 +31,7 @@ export default{
 	},
 	data(){
 		return{
+			id: 'id-' + Math.floor(Math.random() * 100000),
 			open: false,
 			sidebar: {
 				classes: ' body'
@@ -48,8 +49,8 @@ export default{
 	methods: {
 		action(e){
 			e.preventDefault()
-			const opacity = document.querySelector('.menu>.opacity')
-			const body = document.querySelector('.menu>.body')
+			const opacity = document.querySelector(`#${this.id}>.opacity`)
+			const body = document.querySelector(`#${this.id}>.body`)
 			if(!this.open){
 				this.open = true
 				opacity.classList.remove('hidden')
