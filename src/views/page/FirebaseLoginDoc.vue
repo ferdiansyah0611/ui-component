@@ -8,7 +8,7 @@
 					'google', 'facebook'
 				]"
 				redirect="/"
-				:protect="true"
+				:config="{}"
 			/>
 		</div>
 	</div>
