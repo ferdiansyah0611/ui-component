@@ -2,13 +2,17 @@
 	<div class="flex flex-wrap bg-white border p-4 shadow-md w-full sm:w-1/2 lg:w-1/3">
 		<form @submit="submit" class="w-full">
 			<h5 class="font-bold text-center text-xl md:text-2xl mb-4">{{title}}</h5>
+			<Alert
+				:open="alert.open"
+				:type="alert.type"
+			>{{alert.msg}}</Alert>
 			<div class="mt-2">
 				<p class="text-gray-500">Email Account</p>
 				<Text
 					type="email"
 					place="Email"
 					v-model:txt="email"
-					required=""
+					:required="true"
 				/>
 			</div>
 			<div class="mt-2">
@@ -17,7 +21,8 @@
 					type="password"
 					place="Password"
 					v-model:txt="password"
-					required=""
+					:required="true"
+					:auto-complete="true"
 				/>
 			</div>
 			<div class="mt-2">
@@ -42,6 +47,7 @@
 					size="sm"
 					type="primary"
 					role="button"
+					@click="facebook"
 				>Facebook</Button>
 				<Button
 					v-if="data == 'google'"
@@ -49,19 +55,15 @@
 					size="sm"
 					type="secondary"
 					role="button"
+					@click="google"
 				>Google</Button>
-				<Button
-					v-if="data == 'github'"
-					class="mt-2 w-full font-medium"
-					size="sm"
-					type="dark"
-					role="button"
-				>Github</Button>
 			</div>
 		</form>
 	</div>
 </template>
 <script>
+import firebase from 'firebase/app'
+import 'firebase/auth'
 export default{
 	name: 'Login UI Firebase',
 	props: {
@@ -85,21 +87,51 @@ export default{
 			type: String,
 			required: true
 		},
-		protect: {
-			type: Boolean,
-			required: true
-		},
 	},
 	data(){
 		return{
-			email: '',
-			password: ''
+			email: 'fe@gmail',
+			password: '12',
+			alert: {
+				type: 'danger',
+				msg: '',
+				open: "false"
+			}
 		}
+	},
+	created(){
+		firebase.initializeApp(this.config)
 	},
 	methods: {
 		submit(e){
 			e.preventDefault()
-		}
+			try {
+				firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(() => {
+					this.$router.push(this.redirect)
+					window.location.reload(false)
+				})
+			} catch(e) {
+				this.alert.type = 'danger'
+				this.alert.msg = e.message
+				this.alert.open = new Date()
+			}
+		},
+		facebook(e){
+			e.preventDefault()
+			let provider = new firebase.auth.FacebookAuthProvider()
+			firebase.auth().signInWithPopup(provider).then(() => {
+				this.$router.push(this.redirect)
+				window.location.reload(false)
+			})
+		},
+		google(e){
+			e.preventDefault()
+			let provider = new firebase.auth.GoogleAuthProvider()
+			firebase.auth().signInWithPopup(provider).then(() => {
+				this.$router.push(this.redirect)
+				window.location.reload(false)
+			})
+		},
 	}
 }
 </script>
