@@ -1,5 +1,5 @@
 <template>
-	<div :id="'alert-' + id" :class="cls">
+	<div :id="id" :class="cls">
 		<p class="w-full"><slot></slot></p>
 		<span @click="handle" class="cursor-pointer">
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -22,14 +22,10 @@ export default{
 	name: 'Alert UI',
 	props: {
 		open: {
-			type: Boolean,
 			required: true
 		},
 
 		type: {
-			type: String, required: true
-		},
-		txt: {
 			type: String, required: true
 		},
 		bg: {
@@ -50,25 +46,26 @@ export default{
 	},
 	data(){
 		return{
-			id: '',
-			cls: ''
+			id: 'alert-' + Math.floor(Math.random() * 100000),
+			cls: ' '
 		}
 	},
 	beforeMount(){
+		this.open == "false" ? this.cls = this.cls.replace('', ' hidden'): false
 		if(this.type !== 'custom'){
 			for (var i = 0; i < list.length; i++) {
 				if(list[i].type == this.type){
 					if(this.size == 'sm'){
-						this.cls = list[i].cls + ' p-2'
+						this.cls = this.cls.replace('', ' ' + list[i].cls + ' p-2')
 					}
 					if(this.size == 'md'){
-						this.cls = list[i].cls + ' p-3'
+						this.cls = this.cls.replace('', ' ' + list[i].cls + ' p-3')
 					}
 					if(this.size == 'lg'){
-						this.cls = list[i].cls + ' p-4'
+						this.cls = this.cls.replace('', ' ' + list[i].cls + ' p-4')
 					}
 					else{
-						this.cls = list[i].cls + ' p-3'
+						this.cls = this.cls.replace('', ' ' + list[i].cls + ' p-3')
 					}
 				}
 			}
@@ -81,23 +78,27 @@ export default{
 			this.sizeRing ? this.cls = this.cls.replace('', ' focus:ring-' + this.sizeRing): this.cls = this.cls.replace('', ' focus:ring')
 		}
 	},
-	mounted(){
-		this.id = Math.floor(Math.random() * 10000)
-	},
 	watch: {
 		open(value){
-			const el = document.querySelector(`#alert-${this.id}`)
-			if(value){
+			const el = document.querySelector(`#${this.id}`)
+			if(value == 'false'){
+				el.classList.remove('flex')
+				el.classList.add('hidden')
+			}
+			else{
 				el.classList.remove('hidden')
+				el.classList.add('flex')
 			}
 		}
 	},
 	methods: {
 		handle(){
-			const el = document.querySelector(`#alert-${this.id}`)
+			const el = document.querySelector(`#${this.id}`)
 			if(el.classList.contains('hidden')){
 				el.classList.remove('hidden')
+				el.classList.add('flex')
 			}else{
+				el.classList.remove('flex')
 				el.classList.add('hidden')
 			}
 		}
