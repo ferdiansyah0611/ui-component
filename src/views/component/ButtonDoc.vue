@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full bg-white border p-3 mt-2">
+	<div class="w-full bg-white border p-3">
 		<h5 class="mb-5 font-bold text-2xl"># Button Component</h5>
 		<p class="text-xl tracking-wide">Use UI Components custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
 	</div>

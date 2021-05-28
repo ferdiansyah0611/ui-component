@@ -19,6 +19,9 @@ export default{
 	name: 'FirebaseLoginDoc',
 	components: {
 		FirebaseLogin
+	},
+	created(){
+		document.title = 'Page Firebase Login | UI Component Docs'
 	}
 }
 </script>

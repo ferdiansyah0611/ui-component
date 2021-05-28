@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full bg-white border p-3 mt-2">
+	<div class="w-full bg-white border p-3">
 		<h5 class="mb-5 font-bold text-3xl"># Form Component</h5>
 		<p class="text-xl tracking-wide">Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.</p>
 		<div class="flex w-full flex-wrap border mt-2 p-2">

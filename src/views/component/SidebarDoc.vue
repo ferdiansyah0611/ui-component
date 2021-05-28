@@ -58,7 +58,7 @@
 		</div>
 		<div class="p-2 border bg-white">
 			<h5 class="font-bold text-xl md:text-2xl p-2">Example Code</h5>
-			<textarea class="w-full min-h-screen overflow-auto focus:outline-none text-sm">
+			<textarea class="w-full max-h-screen overflow-auto focus:outline-none text-sm" style="min-height: 200px;">
 				<Sidebar post="right" p="4">
 					<template v-slot:head>
 						<h5>My App</h5>

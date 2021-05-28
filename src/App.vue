@@ -6,7 +6,7 @@
 				<router-link class="p-4 font-bold hover:bg-blue-600" to="/">Docs</router-link>
 			</div>
 			<div class="w-1/2 flex justify-end">
-				<router-link class="p-4 font-bold hover:bg-blue-600" to="/">Github</router-link>
+				<a class="p-4 font-bold hover:bg-blue-600" href="https://github.com/ferdiansyah0611">Github</a>
 				<router-link class="p-4 font-bold hover:bg-blue-600" to="/">Donate</router-link>
 			</div>
 		</template>
@@ -22,7 +22,7 @@
 					<template v-slot:link>
 						<router-link class="p-3 font-medium text-black hover:bg-gray-200 w-full" to="/">Home</router-link>
 						<router-link class="p-3 font-medium text-black hover:bg-gray-200 w-full" to="/">Component</router-link>
-						<router-link class="p-3 font-medium text-black hover:bg-gray-200 w-full" to="/">Github</router-link>
+						<a class="p-3 font-medium text-black hover:bg-gray-200 w-full" href="https://github.com/ferdiansyah0611">Github</a>
 						<router-link class="p-3 font-medium text-black hover:bg-gray-200 w-full" to="/">Donate</router-link>
 					</template>
 					<template v-slot:icon>
@@ -37,7 +37,7 @@
 	<div class="mt-14 p-3 sm:p-8">
 		<div class="flex flex-wrap">
 			<div class="w-full md:w-1/5 md:fixed left-0 bg-white md:ml-1 md:z-10">
-				<div class="border pb-3 flex flex-wrap overflow-auto md:max-h-screen">
+				<div class="border pb-3 flex flex-wrap overflow-auto" id="left-menu">
 					<h5 class="font-bold p-3">Documentation</h5>
 					<router-link to="/docs/getting-started" class="p-3 py-1 hover:underline w-full">Getting Started</router-link>
 					<h5 class="font-bold p-3">Components</h5>
@@ -67,3 +67,10 @@ export default{
 	name: 'App',
 }
 </script>
+<style>
+@media (min-width: 768px){
+	#left-menu{
+		max-height: 70vh;
+	}
+}
+</style>

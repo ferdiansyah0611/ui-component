@@ -1,6 +1,6 @@
 <template>
-	<div class="w-full bg-white mt-2">
-		<h5 class="mb-5 font-bold text-3xl p-2"># Card Component</h5>
+	<div class="w-full bg-white">
+		<h5 class="mb-5 font-bold text-2xl p-2"># Card Component</h5>
 		<p class="md:text-xl tracking-wide p-2">A card is a flexible and extensible content 
 			container. It includes options for headers and footers, a wide variety of 
 			content, contextual background colors, and powerful display options.
@@ -9,7 +9,7 @@
 			classes for cards.
 		</p>
 		<div class="flex flex-wrap">
-			<div class="w-1/2 sm:w-1/2 md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-1/2 sm:w-1/2 md:w-1/3 mt-1 md:mt-0 p-1">
 				<Cards type="primary">
 					<template v-slot:head>
 						<h5>Primary</h5>
@@ -19,7 +19,7 @@
 					</template>
 				</Cards>
 			</div>
-			<div class="w-1/2 sm:w-1/2 md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-1/2 sm:w-1/2 md:w-1/3 mt-1 md:mt-0 p-1">
 				<Cards type="danger">
 					<template v-slot:head>
 						<h5>Danger</h5>
@@ -29,7 +29,7 @@
 					</template>
 				</Cards>
 			</div>
-			<div class="w-1/2 sm:w-1/2 md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-1/2 sm:w-1/2 md:w-1/3 mt-1 md:mt-0 p-1">
 				<Cards type="light">
 					<template v-slot:head>
 						<h5>Light</h5>
@@ -39,7 +39,7 @@
 					</template>
 				</Cards>
 			</div>
-			<div class="w-1/2 sm:w-1/2 md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-1/2 sm:w-1/2 md:w-1/3 mt-1 md:mt-0 p-1">
 				<Cards type="secondary">
 					<template v-slot:head>
 						<h5>Secondary</h5>
@@ -49,7 +49,7 @@
 					</template>
 				</Cards>
 			</div>
-			<div class="w-1/2 sm:w-1/2 md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-1/2 sm:w-1/2 md:w-1/3 mt-1 md:mt-0 p-1">
 				<Cards type="success">
 					<template v-slot:head>
 						<h5>Success</h5>
@@ -59,7 +59,7 @@
 					</template>
 				</Cards>
 			</div>
-			<div class="w-1/2 sm:w-1/2 md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-1/2 sm:w-1/2 md:w-1/3 mt-1 md:mt-0 p-1">
 				<Cards type="danger">
 					<template v-slot:head>
 						<h5>Danger</h5>
@@ -69,7 +69,7 @@
 					</template>
 				</Cards>
 			</div>
-			<div class="w-1/2 sm:w-1/2 md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-1/2 sm:w-1/2 md:w-1/3 mt-1 md:mt-0 p-1">
 				<Cards type="warning">
 					<template v-slot:head>
 						<h5>Warning</h5>
@@ -79,7 +79,7 @@
 					</template>
 				</Cards>
 			</div>
-			<div class="w-1/2 sm:w-1/2 md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-1/2 sm:w-1/2 md:w-1/3 mt-1 md:mt-0 p-1">
 				<Cards type="dark">
 					<template v-slot:head>
 						<h5>Dark</h5>
@@ -91,8 +91,8 @@
 			</div>
 		</div>
 		<!--  -->
-		<div class="flex md:space-x-1 flex-wrap md:flex-nowrap">
-			<div class="w-full md:w-1/4 mt-1 md:mt-0 p-1">
+		<div class="flex lg:space-x-1 flex-wrap lg:flex-nowrap">
+			<div class="w-full md:w-1/2 mt-1 md:mt-0 p-1">
 				<Cards type="primary">
 					<template v-slot:head>
 						<h5>Primary</h5>
@@ -106,7 +106,7 @@
 					</template>
 				</Cards>
 			</div>
-			<div class="w-full md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-full md:w-1/2 mt-1 md:mt-0 p-1">
 				<Cards type="danger">
 					<template v-slot:head>
 						<h5>Danger</h5>
@@ -120,7 +120,7 @@
 					</template>
 				</Cards>
 			</div>
-			<div class="w-full md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-full md:w-1/2 mt-1 md:mt-0 p-1">
 				<Cards type="light">
 					<template v-slot:head>
 						<h5>Light</h5>
@@ -134,7 +134,7 @@
 					</template>
 				</Cards>
 			</div>
-			<div class="w-full md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-full md:w-1/2 mt-1 md:mt-0 p-1">
 				<Cards type="success">
 					<template v-slot:head>
 						<h5>Success</h5>
@@ -150,8 +150,8 @@
 			</div>
 		</div>
 		<!--  -->
-		<div class="flex md:space-x-1 flex-wrap md:flex-nowrap">
-			<div class="w-1/2 sm:w-1/2 md:w-1/4 mt-1 md:mt-0 p-1">
+		<div class="flex lg:space-x-1 flex-wrap lg:flex-nowrap">
+			<div class="w-1/2 sm:w-1/2 md:w-1/2 mt-1 md:mt-0 p-1">
 				<Cards type="primary">
 					<template v-slot:head>
 						<img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
@@ -162,7 +162,7 @@
 					</template>
 				</Cards>
 			</div>
-			<div class="w-1/2 sm:w-1/2 md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-1/2 sm:w-1/2 md:w-1/2 mt-1 md:mt-0 p-1">
 				<Cards type="danger">
 					<template v-slot:head>
 						<img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
@@ -173,7 +173,7 @@
 					</template>
 				</Cards>
 			</div>
-			<div class="w-1/2 sm:w-1/2 md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-1/2 sm:w-1/2 md:w-1/2 mt-1 md:mt-0 p-1">
 				<Cards type="light">
 					<template v-slot:head>
 						<img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
@@ -184,7 +184,7 @@
 					</template>
 				</Cards>
 			</div>
-			<div class="w-1/2 sm:w-1/2 md:w-1/4 mt-1 md:mt-0 p-1">
+			<div class="w-1/2 sm:w-1/2 md:w-1/2 mt-1 md:mt-0 p-1">
 				<Cards type="success">
 					<template v-slot:head>
 						<img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
@@ -209,7 +209,7 @@
 export default{
 	name: 'Card Doc',
 	created(){
-		this.title = 'Card Component | UI Component Docs'
+		document.title = 'Card Component | UI Component Docs'
 	}
 }
 </script>
