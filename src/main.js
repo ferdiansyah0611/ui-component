@@ -13,6 +13,8 @@ import File from '@/components/form/File'
 import Alert from '@/components/Alert'
 import Cards from '@/components/Card'
 import Sidebar from '@/components/Sidebar'
+import ButtonIcon from '@/components/ButtonIcon'
+import Tabs from '@/components/Tabs'
 
 const app = createApp(App)
 app.component('Navbar', Navbar)
@@ -25,5 +27,7 @@ app.component('File', File)
 app.component('Alert', Alert)
 app.component('Cards', Cards)
 app.component('Sidebar', Sidebar)
+app.component('ButtonIcon', ButtonIcon)
+app.component('Tabs', Tabs)
 app.use(router)
 app.mount('#app')

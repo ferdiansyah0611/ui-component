@@ -9,6 +9,7 @@ import DropdownDoc from '../views/component/DropdownDoc.vue'
 import FormDoc from '../views/component/FormDoc.vue'
 import NavDoc from '../views/component/NavDoc.vue'
 import SidebarDoc from '../views/component/SidebarDoc.vue'
+import TabsDoc from '../views/component/TabsDoc.vue'
 import FirebaseLoginDoc from '../views/page/FirebaseLoginDoc.vue'
 
 const routes = [
@@ -56,6 +57,11 @@ const routes = [
     path: '/component/sidebar',
     name: 'SidebarDoc',
     component: SidebarDoc
+  },
+  {
+    path: '/component/tabs',
+    name: 'TabsDoc',
+    component: TabsDoc
   },
   {
     path: '/page/firebase-login',
