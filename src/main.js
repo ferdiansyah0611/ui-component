@@ -15,6 +15,7 @@ import Cards from '@/components/Card'
 import Sidebar from '@/components/Sidebar'
 import ButtonIcon from '@/components/ButtonIcon'
 import Tabs from '@/components/Tabs'
+import Collapse from '@/components/Collapse'
 
 const app = createApp(App)
 app.component('Navbar', Navbar)
@@ -29,5 +30,6 @@ app.component('Cards', Cards)
 app.component('Sidebar', Sidebar)
 app.component('ButtonIcon', ButtonIcon)
 app.component('Tabs', Tabs)
+app.component('Collapse', Collapse)
 app.use(router)
 app.mount('#app')

@@ -49,6 +49,7 @@
 					<router-link to="/component/nav" class="p-3 py-1 hover:underline w-full">Nav</router-link>
 					<router-link to="/component/sidebar" class="p-3 py-1 hover:underline w-full">Sidebar</router-link>
 					<router-link to="/component/tabs" class="p-3 py-1 hover:underline w-full">Tabs</router-link>
+					<router-link to="/component/collapse" class="p-3 py-1 hover:underline w-full">Collapse</router-link>
 					<h5 class="font-bold p-3">Page</h5>
 					<router-link to="/page/firebase-login" class="p-3 py-1 hover:underline w-full">Firebase > Login</router-link>
 				</div>
