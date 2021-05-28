@@ -2,32 +2,67 @@
 	<div class="w-full bg-white border p-3 mt-2">
 		<h5 class="mb-5 font-bold text-2xl"># Button Component</h5>
 		<p class="text-xl tracking-wide">Use UI Components custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
-		<div class="flex w-full flex-wrap border mt-2">
+	</div>
+	<div class="w-full bg-white border p-3 mt-2">
+		<h5 class="mb-5 font-bold text-2xl"># Display</h5>
+		<div class="flex w-full flex-wrap mt-2">
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="primary">Primary</Button>
+				<Button class="w-full" type="primary">Primary</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="danger">Danger</Button>
+				<Button class="w-full" type="danger">Danger</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="success">Success</Button>
+				<Button class="w-full" type="success">Success</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="warning">Warning</Button>
+				<Button class="w-full" type="warning">Warning</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="dark">Dark</Button>
+				<Button class="w-full" type="dark">Dark</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="light">Light</Button>
+				<Button class="w-full" type="light">Light</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="secondary">Secondary</Button>
+				<Button class="w-full" type="secondary">Secondary</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
-				<Button class="w-full" size="sm" type="custom" bg="blue-800" p="3" ring="blue-600" color="white" size-ring="4">
+				<Button class="w-full bg-blue-800" type="custom" p="3" ring="blue-600" color="white" size-ring="4">
 					Custom
 				</Button>
+			</div>
+			<div class="p-2 w-full md:w-1/4">
+				<ButtonIcon size="md" class="w-full" type="primary">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+					<span class="font-medium">Icon</span>
+				</ButtonIcon>
+			</div>
+			<div class="p-2 w-full md:w-1/4">
+				<ButtonIcon size="md" class="w-full" type="danger">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+					<span class="font-medium">Icon</span>
+				</ButtonIcon>
+			</div>
+			<div class="p-2 w-full md:w-1/4">
+				<ButtonIcon size="md" class="w-full" type="success">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+					<span class="font-medium">Icon</span>
+				</ButtonIcon>
+			</div>
+			<div class="p-2 w-full md:w-1/4">
+				<ButtonIcon size="md" class="w-full" type="warning">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+					<span class="font-medium">Icon</span>
+				</ButtonIcon>
 			</div>
 		</div>
 	</div>

@@ -101,7 +101,7 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</template>
 					<template v-slot:footer>
-						<Button type="warning">Save</Button>
+						<Button type="light">Save</Button>
 						<Button type="danger">Delete</Button>
 					</template>
 				</Cards>
@@ -115,8 +115,8 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</template>
 					<template v-slot:footer>
-						<Button type="warning">Save</Button>
-						<Button type="light">Delete</Button>
+						<Button type="light">Save</Button>
+						<Button type="danger">Delete</Button>
 					</template>
 				</Cards>
 			</div>
@@ -129,7 +129,7 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</template>
 					<template v-slot:footer>
-						<Button type="warning">Save</Button>
+						<Button type="light">Save</Button>
 						<Button type="danger">Delete</Button>
 					</template>
 				</Cards>
@@ -143,7 +143,7 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</template>
 					<template v-slot:footer>
-						<Button type="warning">Save</Button>
+						<Button type="light">Save</Button>
 						<Button type="danger">Delete</Button>
 					</template>
 				</Cards>

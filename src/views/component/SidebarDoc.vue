@@ -2,7 +2,7 @@
 	<div>
 		<h5 class="mb-5 font-bold text-2xl"># Sidebar Component</h5>
 		<p class="text-xl tracking-wide">Use UI Components custom sidebar styles for actions in navigations.</p>
-		<div class="flex justify-center">
+		<div class="flex justify-center flex-wrap">
 			<Sidebar post="left" p="4">
 				<template v-slot:head>
 					<h5>UI Component</h5>
@@ -27,6 +27,32 @@
 				</template>
 				<template v-slot:icon>
 					<span class="border p-3">Right Position</span>
+				</template>
+			</Sidebar>
+			<Sidebar post="top" p="4">
+				<template v-slot:head>
+					<h5>UI Component</h5>
+				</template>
+				<template v-slot:link>
+					<router-link class="p-3 font-medium text-black hover:bg-gray-200 w-full" to="/">Home</router-link>
+					<router-link class="p-3 font-medium text-black hover:bg-gray-200 w-full" to="/">About</router-link>
+					<router-link class="p-3 font-medium text-black hover:bg-gray-200 w-full" to="/">Github</router-link>
+				</template>
+				<template v-slot:icon>
+					<span class="border p-3">Top Position</span>
+				</template>
+			</Sidebar>
+			<Sidebar post="bottom" p="4">
+				<template v-slot:head>
+					<h5>UI Component</h5>
+				</template>
+				<template v-slot:link>
+					<router-link class="p-3 font-medium text-black hover:bg-gray-200 w-full" to="/">Home</router-link>
+					<router-link class="p-3 font-medium text-black hover:bg-gray-200 w-full" to="/">About</router-link>
+					<router-link class="p-3 font-medium text-black hover:bg-gray-200 w-full" to="/">Github</router-link>
+				</template>
+				<template v-slot:icon>
+					<span class="border p-3">Bottom Position</span>
 				</template>
 			</Sidebar>
 		</div>
