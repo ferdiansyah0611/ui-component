@@ -47,6 +47,10 @@
 <span class="text-red-400">import</span> File <span class="text-red-400">from</span> <span class="text-yellow-600">'@/components/form/File'</span>
 <span class="text-red-400">import</span> Alert <span class="text-red-400">from</span> <span class="text-yellow-600">'@/components/Alert'</span>
 <span class="text-red-400">import</span> Cards <span class="text-red-400">from</span> <span class="text-yellow-600">'@/components/Card'</span>
+<span class="text-red-400">import</span> Sidebar <span class="text-red-400">from</span> <span class="text-yellow-600">'@/components/Sidebar'</span>
+<span class="text-red-400">import</span> ButtonIcon <span class="text-red-400">from</span> <span class="text-yellow-600">'@/components/ButtonIcon'</span>
+<span class="text-red-400">import</span> Tabs <span class="text-red-400">from</span> <span class="text-yellow-600">'@/components/Tabs'</span>
+<span class="text-red-400">import</span> Collapse <span class="text-red-400">from</span> <span class="text-yellow-600">'@/components/Collapse'</span>
 <span class="text-blue-400">const</span> app = createApp({})
 app.component('Navbar', Navbar)
 app.component('Dropdown', Dropdown)
@@ -57,6 +61,10 @@ app.component('Select', Select)
 app.component('File', File)
 app.component('Alert', Alert)
 app.component('Cards', Cards)
+app.component('Sidebar', Sidebar)
+app.component('ButtonIcon', ButtonIcon)
+app.component('Tabs', Tabs)
+app.component('Collapse', Collapse)
 </code>
 	</pre>
 	<div class="bg-gray-100 p-3 mb-2">
