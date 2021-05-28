@@ -10,7 +10,7 @@ export default{
 	props: {
 		file: {
 			type: String,
-			required: false
+			required: true
 		},
 		title: {
 			type: String,

@@ -3,7 +3,7 @@
 		<div class="grid grid-flow-col">
 			<Button @click="handle" :type="type">{{title}}</Button>
 		</div>
-		<div class="body w-full h-0 hidden p-3 border transition-all duration-300 bg-white">
+		<div class="body w-full h-0 hidden p-3 border transition-all duration-300 bg-white flex flex-wrap">
 			<slot></slot>
 		</div>
 	</div>

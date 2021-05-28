@@ -20,10 +20,24 @@
 						<h5>UI Component</h5>
 					</template>
 					<template v-slot:link>
-						<router-link class="p-3 font-medium text-black hover:bg-gray-200 w-full" to="/">Home</router-link>
-						<router-link class="p-3 font-medium text-black hover:bg-gray-200 w-full" to="/">Component</router-link>
-						<a class="p-3 font-medium text-black hover:bg-gray-200 w-full" href="https://github.com/ferdiansyah0611">Github</a>
-						<router-link class="p-3 font-medium text-black hover:bg-gray-200 w-full" to="/">Donate</router-link>
+						<router-link class="p-3 text-black hover:bg-gray-200 w-full text-center" to="/">Home</router-link>
+						<Collapse class="w-full font-medium text-center" type="light" title="Component">
+							<router-link to="/component/alert" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Alert</router-link>
+							<router-link to="/component/button" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Button</router-link>
+							<router-link to="/component/card" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Card</router-link>
+							<router-link to="/component/dropdown" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Dropdown</router-link>
+							<router-link to="/component/form" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Form</router-link>
+							<router-link to="/component/nav" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Nav</router-link>
+							<router-link to="/component/sidebar" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Sidebar</router-link>
+							<router-link to="/component/tabs" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Tabs</router-link>
+							<router-link to="/component/collapse" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Collapse</router-link>
+						</Collapse>
+						<Collapse class="w-full font-medium text-center" type="light" title="Page">
+							<router-link to="/page/firebase-login" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Firebase Login</router-link>
+							<router-link to="/page/firebase-register" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Firebase Register</router-link>
+						</Collapse>
+						<a class="p-3 text-black hover:bg-gray-200 w-full text-center" href="https://github.com/ferdiansyah0611">Github</a>
+						<router-link class="p-3 text-black hover:bg-gray-200 w-full text-center" to="/">Donate</router-link>
 					</template>
 					<template v-slot:icon>
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -34,24 +48,25 @@
 			</div>
 		</template>
 	</Navbar>
-	<div class="mt-14 p-3 sm:p-8">
+	<div class="mt-14 sm:mt-8 p-3 sm:p-8">
 		<div class="flex flex-wrap">
-			<div class="w-full md:w-1/5 md:fixed left-0 bg-white md:ml-1 md:z-10">
-				<div class="border pb-3 flex flex-wrap overflow-auto" id="left-menu">
+			<div class="hidden md:block md:w-1/5 md:fixed left-0 bg-white md:z-10">
+				<div class="border pb-3 flex flex-wrap overflow-auto bg-gray-100" id="left-menu">
 					<h5 class="font-bold p-3">Documentation</h5>
-					<router-link to="/docs/getting-started" class="p-3 py-1 hover:underline w-full">Getting Started</router-link>
+					<router-link to="/docs/getting-started" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Getting Started</router-link>
 					<h5 class="font-bold p-3">Components</h5>
-					<router-link to="/component/alert" class="p-3 py-1 hover:underline w-full">Alert</router-link>
-					<router-link to="/component/button" class="p-3 py-1 hover:underline w-full">Button</router-link>
-					<router-link to="/component/card" class="p-3 py-1 hover:underline w-full">Card</router-link>
-					<router-link to="/component/dropdown" class="p-3 py-1 hover:underline w-full">Dropdown</router-link>
-					<router-link to="/component/form" class="p-3 py-1 hover:underline w-full">Form</router-link>
-					<router-link to="/component/nav" class="p-3 py-1 hover:underline w-full">Nav</router-link>
-					<router-link to="/component/sidebar" class="p-3 py-1 hover:underline w-full">Sidebar</router-link>
-					<router-link to="/component/tabs" class="p-3 py-1 hover:underline w-full">Tabs</router-link>
-					<router-link to="/component/collapse" class="p-3 py-1 hover:underline w-full">Collapse</router-link>
+					<router-link to="/component/alert" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Alert</router-link>
+					<router-link to="/component/button" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Button</router-link>
+					<router-link to="/component/card" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Card</router-link>
+					<router-link to="/component/dropdown" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Dropdown</router-link>
+					<router-link to="/component/form" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Form</router-link>
+					<router-link to="/component/nav" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Nav</router-link>
+					<router-link to="/component/sidebar" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Sidebar</router-link>
+					<router-link to="/component/tabs" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Tabs</router-link>
+					<router-link to="/component/collapse" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Collapse</router-link>
 					<h5 class="font-bold p-3">Page</h5>
-					<router-link to="/page/firebase-login" class="p-3 py-1 hover:underline w-full">Firebase > Login</router-link>
+					<router-link to="/page/firebase-login" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Firebase > Login</router-link>
+					<router-link to="/page/firebase-register" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Firebase > Register</router-link>
 				</div>
 				<h5 class="text-center mt-2 hidden md:block">&copy; {{new Date().getFullYear()}} ferdiansyah0611</h5>
 			</div>

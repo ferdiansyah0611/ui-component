@@ -7,7 +7,7 @@
 				:type="alert.type"
 			>{{alert.msg}}</Alert>
 			<div class="mt-2">
-				<p class="text-gray-500">Email Account</p>
+				<p class="text-gray-500 w-full mb-2 mt-2 text-sm sm:text-base">Email Account</p>
 				<Text
 					type="email"
 					place="Email"
@@ -16,7 +16,7 @@
 				/>
 			</div>
 			<div class="mt-2">
-				<p class="text-gray-500">Password Account</p>
+				<p class="text-gray-500 w-full mb-2 mt-2 text-sm sm:text-base">Password Account</p>
 				<Text
 					type="password"
 					place="Password"
@@ -90,8 +90,8 @@ export default{
 	},
 	data(){
 		return{
-			email: 'fe@gmail',
-			password: '12',
+			email: '',
+			password: '',
 			alert: {
 				type: 'danger',
 				msg: '',
