@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h5 class="mb-5 font-bold text-2xl"># Nav Component</h5>
+		<h5 class="mb-3 font-bold text-2xl"># Nav Component</h5>
 		<p class="text-xl tracking-wide p-2">Documentation and examples for how to use UI Component included navigation components.</p>
 		<div class="p-2 w-full" v-for="(data, key) in nav" v-bind:key="key">
 			<Navbar :type="data.name">

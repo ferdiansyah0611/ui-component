@@ -12,6 +12,7 @@ import SidebarDoc from '../views/component/SidebarDoc.vue'
 import TabsDoc from '../views/component/TabsDoc.vue'
 import CollapseDoc from '../views/component/CollapseDoc.vue'
 import FirebaseLoginDoc from '../views/page/FirebaseLoginDoc.vue'
+import FirebaseRegisterDoc from '../views/page/FirebaseRegisterDoc.vue'
 
 const routes = [
   {
@@ -73,6 +74,11 @@ const routes = [
     path: '/page/firebase-login',
     name: 'FirebaseLoginDoc',
     component: FirebaseLoginDoc
+  },
+  {
+    path: '/page/firebase-register',
+    name: 'FirebaseRegisterDoc',
+    component: FirebaseRegisterDoc
   },
 ]
 

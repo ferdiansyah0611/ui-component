@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full bg-white">
-		<h5 class="mb-5 font-bold text-2xl p-2"># Card Component</h5>
+		<h5 class="font-bold text-2xl p-2"># Card Component</h5>
 		<p class="md:text-xl tracking-wide p-2">A card is a flexible and extensible content 
 			container. It includes options for headers and footers, a wide variety of 
 			content, contextual background colors, and powerful display options.

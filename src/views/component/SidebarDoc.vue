@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h5 class="mb-5 font-bold text-2xl"># Sidebar Component</h5>
+		<h5 class="mb-3 font-bold text-2xl"># Sidebar Component</h5>
 		<p class="text-xl tracking-wide">Use UI Components custom sidebar styles for actions in navigations.</p>
 		<div class="flex justify-center flex-wrap">
 			<Sidebar post="left" p="4">

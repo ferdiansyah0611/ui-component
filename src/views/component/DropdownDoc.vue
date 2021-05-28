@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full bg-white border p-3">
-		<h5 class="mb-5 font-bold text-2xl"># Dropdown Component</h5>
+		<h5 class="mb-3 font-bold text-2xl"># Dropdown Component</h5>
 		<p class="text-xl tracking-wide">Toggle contextual overlays for displaying lists of links and more with the UI Component dropdown plugin.</p>
 		<div class="flex w-full flex-wrap border mt-2">
 			<div class="p-2 w-full md:w-1/4">

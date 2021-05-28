@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full bg-white border p-3">
-		<h5 class="mb-5 font-bold text-3xl"># Collapse Component</h5>
+		<h5 class="mb-3 font-bold text-2xl"># Collapse Component</h5>
 		<p class="text-xl tracking-wide">Toggle the visibility of content across your project with a few classes.</p>
 	</div>
 	<div class="w-full bg-white border p-3 mt-2">

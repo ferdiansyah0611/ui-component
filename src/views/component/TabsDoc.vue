@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full bg-white border p-3">
-		<h5 class="mb-5 font-bold text-3xl"># Tabs Component</h5>
+		<h5 class="mb-3 font-bold text-2xl"># Tabs Component</h5>
 		<p class="text-xl tracking-wide">Documentation and examples for how to use UI Component included navigation components.</p>
 	</div>
 	<div class="w-full bg-white border p-3 mt-2">

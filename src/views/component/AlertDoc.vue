@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full bg-white border p-3">
-		<h5 class="mb-5 font-bold text-3xl"># Alert Component</h5>
+		<h5 class="mb-3 font-bold text-2xl"># Alert Component</h5>
 		<p class="text-xl tracking-wide">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
 		<div class="w-full flex-wrap flex mt-2 sm:mt-0">
 			<div class="w-full md:w-2/4 xl:w-1/4 p-1">
