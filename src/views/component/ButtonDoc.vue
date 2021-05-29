@@ -33,6 +33,27 @@
 				</Button>
 			</div>
 			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" type="outline-primary">outline-primary</Button>
+			</div>
+			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" type="outline-danger">outline-danger</Button>
+			</div>
+			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" type="outline-success">outline-success</Button>
+			</div>
+			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" type="outline-warning">outline-warning</Button>
+			</div>
+			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" type="outline-dark">outline-dark</Button>
+			</div>
+			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" type="outline-light">outline-light</Button>
+			</div>
+			<div class="p-2 w-full md:w-1/4">
+				<Button class="w-full" type="outline-secondary">outline-secondary</Button>
+			</div>
+			<div class="p-2 w-full md:w-1/4">
 				<ButtonIcon size="md" class="w-full" type="primary">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -58,6 +79,14 @@
 			</div>
 			<div class="p-2 w-full md:w-1/4">
 				<ButtonIcon size="md" class="w-full" type="warning">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+					<span class="font-medium">Icon</span>
+				</ButtonIcon>
+			</div>
+			<div class="p-2 w-full md:w-1/4">
+				<ButtonIcon size="md" class="w-full" type="dark">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 					</svg>
