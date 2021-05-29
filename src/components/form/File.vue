@@ -6,12 +6,8 @@
 <script>
 export default{
 	name: 'File UI',
-	emits: ['update:file'],
+	emits: ['changes'],
 	props: {
-		file: {
-			type: String,
-			required: true
-		},
 		title: {
 			type: String,
 			required: false
@@ -32,6 +28,13 @@ export default{
 			type: String,
 			required: false
 		},
+		changes: {
+			type: Array,
+			required: false
+		},
+		file: {
+			required: false
+		},
 	},
 	data(){
 		return{
@@ -43,7 +46,9 @@ export default{
 	},
 	methods: {
 		handle(e){
-			this.$emit('update:file', this.$props.multiple ? e.target.files: e.target.files[0])
+			/*console.log(new File([e.target.files[0]], e.target.files[0].name))*/
+			this.$emit('changes', e.target.files)
+			/*this.$emit('update:file', e.target.files)*/
 		},
 		click(){
 			document.querySelector(`input[name=file-${this.$data.id}`).click()

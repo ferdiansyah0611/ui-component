@@ -2,6 +2,10 @@
 	<div class="flex justify-center w-full">
 		<div class="w-4/5 sm:w-1/2 md:w-2/5 bg-white p-4 shadow-md border">
 			<h5 class="text-center font-medium text-xl">Register App</h5>
+			<Alert
+				:open="alert.open"
+				:type="alert.type"
+			>{{alert.msg}}</Alert>
 			<form @submit="submit">
 				<div class="mt-2">
 					<img v-if="avatarDisplay" :src="avatarDisplay" alt="avatar" class="w-full">
@@ -40,9 +44,9 @@
 				<div class="mt-2">
 					<div class="flex w-full">
 						<File
-							v-model:file="avatar"
 							:multiple="false"
 							accept="image/*"
+							@file="handle"
 						/>
 					</div>
 				</div>
@@ -141,6 +145,9 @@ export default{
 				this.alert.open = new Date()
 			}
 		},
+		handle(e){
+			this.avatar = e[0]
+		}
 	}
 }
 </script>

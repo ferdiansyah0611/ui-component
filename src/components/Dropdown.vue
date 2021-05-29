@@ -27,6 +27,9 @@ export default{
 		link: {
 			type: Array, required: false
 		},
+		animate: {
+			type: String, required: false
+		},
 
 		type: {
 			type: String, required: true
@@ -64,20 +67,21 @@ export default{
 		}
 	},
 	beforeMount(){
+		this.animate == 'scale' ? this.clasess = ' visible transform scale-0 transition duration-200 flex flex-wrap w-full bg-white p-1 border absolute top-0 left-0 mt-12 z-10': ''
 		if(this.type !== 'custom'){
 			for (var i = 0; i < list.length; i++) {
 				if(list[i].type == this.type){
 					if(this.size == 'sm'){
-						this.cls = list[i].cls + ' p-2'
+						this.cls = this.cls.replace('', ' ' + list[i].cls + ' p-2')
 					}
 					if(this.size == 'md'){
-						this.cls = list[i].cls + ' p-3'
+						this.cls = this.cls.replace('', ' ' + list[i].cls + ' p-3')
 					}
 					if(this.size == 'lg'){
-						this.cls = list[i].cls + ' p-4'
+						this.cls = this.cls.replace('', ' ' + list[i].cls + ' p-4')
 					}
 					else{
-						this.cls = list[i].cls + ' p-3'
+						this.cls = this.cls.replace('', ' ' + list[i].cls + ' p-3')
 					}
 					break;
 				}
@@ -110,10 +114,20 @@ export default{
 			e.preventDefault()
 			if(!this.open){
 				this.open = true
-				this.clasess = 'flex flex-wrap w-full bg-white p-1 border absolute top-0 left-0 mt-12 z-10'
+				if(this.animate == 'scale'){
+					this.clasess = 'transform scale-100 transition duration-200 flex flex-wrap w-full bg-white p-1 border absolute top-0 left-0 mt-12 z-10'
+				}
+				else{
+					this.clasess = 'flex flex-wrap w-full bg-white p-1 border absolute top-0 left-0 mt-12 z-10'
+				}
 			}else{
 				this.open = false
-				this.clasess = 'hidden'
+				if(this.animate == 'scale'){
+					this.clasess = ' visible transform scale-0 transition duration-200 flex flex-wrap w-full bg-white p-1 border absolute top-0 left-0 mt-12 z-10'
+				}
+				else{
+					this.clasess = 'hidden'
+				}
 			}
 		}
 	}
