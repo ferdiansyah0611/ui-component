@@ -31,6 +31,7 @@
 							<router-link to="/component/sidebar" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Sidebar</router-link>
 							<router-link to="/component/tabs" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Tabs</router-link>
 							<router-link to="/component/collapse" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Collapse</router-link>
+							<router-link to="/component/modal" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Modal</router-link>
 						</Collapse>
 						<Collapse class="w-full font-medium text-center" type="light" title="Page">
 							<router-link to="/page/firebase-login" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Firebase Login</router-link>
@@ -64,6 +65,7 @@
 					<router-link to="/component/sidebar" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Sidebar</router-link>
 					<router-link to="/component/tabs" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Tabs</router-link>
 					<router-link to="/component/collapse" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Collapse</router-link>
+					<router-link to="/component/modal" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Modal</router-link>
 					<h5 class="font-bold p-3">Page</h5>
 					<router-link to="/page/firebase-login" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Firebase > Login</router-link>
 					<router-link to="/page/firebase-register" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-200">Firebase > Register</router-link>

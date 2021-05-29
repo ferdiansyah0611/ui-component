@@ -72,9 +72,9 @@
 						<p class="w-full mb-2 mt-2 text-sm sm:text-base">File Type</p>
 						<div class="flex w-full">
 							<File
-								v-model:file="example.file"
 								:multiple="false"
 								accept="image/*"
+								@changes="file"
 							></File>
 						</div>
 					</div>
@@ -82,10 +82,10 @@
 						<p class="w-full mb-2 mt-2 text-sm sm:text-base">File Type Disabled</p>
 						<div class="flex w-full">
 							<File
-								disabled="true"
-								v-model:file="example.file"
+								:disabled="true"
 								:multiple="false"
 								accept="image/*"
+								@changes="file"
 							></File>
 						</div>
 					</div>
@@ -151,7 +151,7 @@ export default{
 				text: '',
 				area: '',
 				select: 'Default Value',
-				file: '',
+				file: [],
 				one: `<<span class="text-red-500">Text</span>
 	<span class="text-green-500">type</span>="text"
 	<span class="text-green-500">place</span>="My placeholder"
@@ -182,5 +182,10 @@ export default{
 			}
 		}
 	},
+	methods: {
+		file(e){
+			this.example.file = e[0]
+		}
+	}
 }
 </script>

@@ -197,6 +197,40 @@
 			</div>
 		</div>
 	</div>
+	<div class="m-2 p-2 border bg-white">
+		<h5 class="font-bold text-xl md:text-2xl p-2">Example Code</h5>
+		<textarea class="w-full min-h-screen overflow-auto focus:outline-none text-sm">
+<Cards type="primary">
+	<template v-slot:head>
+		<h5>Primary</h5>
+	</template>
+	<template v-slot:content>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</template>
+</Cards>
+<Cards type="primary">
+	<template v-slot:head>
+		<h5>Primary</h5>
+	</template>
+	<template v-slot:content>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</template>
+	<template v-slot:footer>
+		<Button type="light">Save</Button>
+		<Button type="danger">Delete</Button>
+	</template>
+</Cards>
+<Cards type="success">
+	<template v-slot:head>
+		<img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+		<h5 class="mt-2">Success</h5>
+	</template>
+	<template v-slot:content>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</template>
+</Cards>
+		</textarea>
+	</div>
 	<div class="w-full bg-white border p-3 mt-2">
 		<h5 class="font-bold text-2xl">Refference</h5>
 		<div class="w-full border-b py-2">

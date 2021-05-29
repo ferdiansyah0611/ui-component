@@ -4,7 +4,7 @@
 		<p class="text-xl tracking-wide">Toggle contextual overlays for displaying lists of links and more with the UI Component dropdown plugin.</p>
 		<div class="flex w-full flex-wrap border mt-2">
 			<div class="p-2 w-full md:w-1/4">
-				<Dropdown txt="Dropdown" type="primary">
+				<Dropdown animate="scale" txt="Dropdown" type="primary">
 					<router-link to="/" class="p-2 w-full hover:bg-gray-100 transition-all duration-200 z-10 bg-white">
 						Link 1
 					</router-link>
@@ -121,6 +121,10 @@
 	</div>
 	<div class="w-full bg-white border p-3 mt-2">
 		<h5 class="font-bold text-2xl">Refference</h5>
+		<div class="w-full border-b py-2">
+			<h5 class="font-medium mb-1 text-sm md:text-base"><code>animate (String)</code></h5>
+			<p class="text-sm">Animation of dropdown. List animation: scale.</p>
+		</div>
 		<div class="w-full border-b py-2">
 			<h5 class="font-medium mb-1 text-sm md:text-base"><code>link (Array)</code></h5>
 			<p class="text-sm">A list link of dropdown. Must be object and have property name & link.</p>

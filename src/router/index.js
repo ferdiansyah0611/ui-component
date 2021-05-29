@@ -11,6 +11,7 @@ import NavDoc from '../views/component/NavDoc.vue'
 import SidebarDoc from '../views/component/SidebarDoc.vue'
 import TabsDoc from '../views/component/TabsDoc.vue'
 import CollapseDoc from '../views/component/CollapseDoc.vue'
+import ModalDoc from '../views/component/ModalDoc.vue'
 import FirebaseLoginDoc from '../views/page/FirebaseLoginDoc.vue'
 import FirebaseRegisterDoc from '../views/page/FirebaseRegisterDoc.vue'
 
@@ -69,6 +70,11 @@ const routes = [
     path: '/component/collapse',
     name: 'CollapseDoc',
     component: CollapseDoc
+  },
+  {
+    path: '/component/modal',
+    name: 'ModalDoc',
+    component: ModalDoc
   },
   {
     path: '/page/firebase-login',

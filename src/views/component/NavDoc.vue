@@ -31,7 +31,7 @@
 		<div class="m-2 p-2 border bg-white">
 			<h5 class="font-bold text-xl md:text-2xl p-2">Example Code</h5>
 			<textarea class="w-full min-h-screen overflow-auto focus:outline-none text-sm">
-<Navbar :ype="primary">
+<Navbar :type="primary">
 	<template v-slot:navs>
 		<div class="w-1/2 flex justify-start">
 			<router-link class="p-4 font-bold hover:bg-blue-600" to="/">My App</router-link>

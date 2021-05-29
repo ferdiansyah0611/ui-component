@@ -16,6 +16,7 @@ import Sidebar from '@/components/Sidebar'
 import ButtonIcon from '@/components/ButtonIcon'
 import Tabs from '@/components/Tabs'
 import Collapse from '@/components/Collapse'
+import Modal from '@/components/Modal'
 
 const app = createApp(App)
 app.component('Navbar', Navbar)
@@ -31,5 +32,6 @@ app.component('Sidebar', Sidebar)
 app.component('ButtonIcon', ButtonIcon)
 app.component('Tabs', Tabs)
 app.component('Collapse', Collapse)
+app.component('Modal', Modal)
 app.use(router)
 app.mount('#app')
