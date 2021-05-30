@@ -46,7 +46,7 @@
 						<File
 							:multiple="false"
 							accept="image/*"
-							@file="handle"
+							@changes="handle"
 						/>
 					</div>
 				</div>
@@ -93,6 +93,9 @@ export default{
 			required: false
 		},
 	},
+	created(){
+		firebase.initializeApp(this.config)
+	},
 	data(){
 		return{
 			username: '',
@@ -105,11 +108,6 @@ export default{
 				msg: '',
 				open: "false"
 			}
-		}
-	},
-	watch: {
-		avatar(value){
-			this.avatarDisplay = URL.createObjectURL(value)
 		}
 	},
 	methods: {
@@ -147,6 +145,7 @@ export default{
 		},
 		handle(e){
 			this.avatar = e[0]
+			this.avatarDisplay = URL.createObjectURL(e[0])
 		}
 	}
 }
