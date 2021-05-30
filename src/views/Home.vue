@@ -2,7 +2,7 @@
 	<div class="w-full bg-white p-3 mt-2">
 		<h1 class="text-2xl font-bold mb-5">UI Component</h1>
 		<p class="text-xl mt-3">
-			A modern components front-end framework based on Material Design
+			A components framework based on UI Component.
 		</p>
 		<div class="grid grid-rows-1 sm:grid-rows-2 md:grid-flow-col mt-5">
 			<Cards class="mt-2 md:mt-0" type="light">
@@ -10,10 +10,7 @@
 					Speeds up development
 				</template>
 				<template v-slot:content>
-					We did most of the heavy lifting for you to provide a 
-					default stylings that incorporate our custom components. 
-					Additionally, we refined animations and transitions to 
-					provide a smoother experience for developers.
+					We do most of the heavy lifting for you making it easier and faster for your development.
 				</template>
 			</Cards>
 			<Cards class="mt-2 md:mt-0" type="light">
@@ -21,11 +18,7 @@
 					User Experience Focused
 				</template>
 				<template v-slot:content>
-					By utilizing elements and principles of Material Design, 
-					we were able to create a framework that incorporates components 
-					and animations that provide more feedback to users. Additionally, 
-					a single underlying responsive system across all platforms allow 
-					for a more unified user experience.
+					Using the principles of Material Design, we can create a framework that incorporates components.
 				</template>
 			</Cards>
 			<Cards class="mt-2 md:mt-0" type="light">
@@ -33,10 +26,7 @@
 					Easy to work with
 				</template>
 				<template v-slot:content>
-					We have provided detailed documentation as well as 
-					specific code examples to help new users get started. 
-					We are also always open to feedback and can answer any 
-					questions a user may have about UI Component.
+					We also provide documentation sample code specifically to help new users get started. We are always open to feedback for users.
 				</template>
 			</Cards>
 			<Cards class="mt-2 md:mt-0" type="light">
