@@ -72,10 +72,6 @@ import 'firebase/firestore'
 export default{
 	name: 'Register UI Firebase',
 	props: {
-		config: {
-			type: Object,
-			required: true
-		},
 		title: {
 			type: String,
 			required: true
@@ -92,9 +88,6 @@ export default{
 			type: String,
 			required: false
 		},
-	},
-	created(){
-		firebase.initializeApp(this.config)
 	},
 	data(){
 		return{

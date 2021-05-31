@@ -67,10 +67,6 @@ import 'firebase/auth'
 export default{
 	name: 'Login UI Firebase',
 	props: {
-		config: {
-			type: Object,
-			required: true
-		},
 		title: {
 			type: String,
 			required: true
@@ -98,9 +94,6 @@ export default{
 				open: "false"
 			}
 		}
-	},
-	created(){
-		firebase.initializeApp(this.config)
 	},
 	methods: {
 		submit(e){
