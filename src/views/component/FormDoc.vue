@@ -111,7 +111,7 @@
 		</div>
 		<div class="w-full border-b py-2">
 			<h5 class="font-medium mb-1 text-sm md:text-base"><code>v-model:txt (Any *Adjust Model)</code></h5>
-			<p class="text-sm">Class bacground-color if type is custom.</p>
+			<p class="text-sm">Model on form component.</p>
 		</div>
 		<div class="w-full border-b py-2">
 			<h5 class="font-medium mb-1 text-sm md:text-base"><code>:disabled (Boolean)</code></h5>
@@ -136,6 +136,10 @@
 		<div class="w-full border-b py-2">
 			<h5 class="font-medium mb-1 text-sm md:text-base"><code>:defaultValue (String)</code></h5>
 			<p class="text-sm">Default value of select component.</p>
+		</div>
+		<div class="w-full border-b py-2">
+			<h5 class="font-medium mb-1 text-sm md:text-base"><code>@changes (methods)</code></h5>
+			<p class="text-sm">Return value a file.</p>
 		</div>
 	</div>
 </template>
@@ -175,7 +179,7 @@ export default{
 />
 <<span class="text-red-500">File</span>
 	<span class="text-green-500">accept</span>="image/*"
-	<span class="text-green-500">v-model:file</span>="files"
+	<span class="text-green-500">@changes</span>="files"
 	<span class="text-green-500">:multiple</span>="true"
 />
 `

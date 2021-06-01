@@ -426,6 +426,40 @@ function h(n2, l2, u2) {
     return n.__c && n.__c(n2, g1), d2;
 }
 h.shallowRender = d1;
+const listAll = {
+    get alert () {
+        return [
+            {
+                type: 'primary',
+                cls: 'bg-blue-500 text-white shadow'
+            },
+            {
+                type: 'danger',
+                cls: 'bg-red-500 text-white shadow'
+            },
+            {
+                type: 'success',
+                cls: 'bg-green-500 text-white shadow'
+            },
+            {
+                type: 'warning',
+                cls: 'bg-yellow-500 text-white shadow'
+            },
+            {
+                type: 'dark',
+                cls: 'bg-black text-white shadow'
+            },
+            {
+                type: 'light',
+                cls: 'bg-white text-black border border-gray-200'
+            },
+            {
+                type: 'secondary',
+                cls: 'bg-gray-200 text-black border border-gray-300'
+            }, 
+        ];
+    }
+};
 const $data = {
 };
 $data.alert = [];
@@ -465,7 +499,7 @@ const Alert = (el, type)=>{
     if (query.length >= 1) {
         query.forEach((querys)=>{
             const id = 'alert-' + Math.floor(Math.random() * 100000);
-            list.forEach((lists)=>{
+            listAll.alert.forEach((lists)=>{
                 if (lists.type == type) {
                     let status = false;
                     lists.cls.split(' ').forEach((cls)=>querys.classList.add(cls)
@@ -560,12 +594,8 @@ const App = function(conf = {
         config: conf,
         data: data,
         set alert (value){
-            try {
-                value.forEach((data1)=>Alert(data1.el, data1.type)
-                );
-            } catch (e1) {
-                console.log(e1.message);
-            }
+            value.forEach((data1)=>Alert(data1.el, data1.type)
+            );
         },
         get alert () {
             return $data.alert;

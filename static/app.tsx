@@ -1,5 +1,7 @@
 import { h } from "https://x.lcas.dev/preact@10.5.12/mod.js";
 import { renderToString } from "https://x.lcas.dev/preact@10.5.12/ssr.js";
+import listAll from './list.ts'
+
 declare namespace JSX {
   interface IntrinsicElements {
     [elemName: string]: any;
@@ -35,7 +37,7 @@ const Alert: Function = (el: string, type: string) => {
 	if(query.length >= 1){
 		query.forEach((querys: queryType) => {
 			const id: any = 'alert-' + Math.floor(Math.random() * 100000)
-			list.forEach((lists: {
+			listAll.alert.forEach((lists: {
 				type: string,
 				cls: string
 			}) => {
@@ -110,11 +112,7 @@ const App = function(conf = {}){
 		config: conf,
 		data: data,
 		set alert(value: any[]){
-			try{
-				value.forEach(data => Alert(data.el, data.type))
-			}catch(e){
-				console.log(e.message)
-			}
+			value.forEach(data => Alert(data.el, data.type))
 		},
 		get alert(){
 			return $data.alert
