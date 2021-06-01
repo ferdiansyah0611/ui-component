@@ -56,10 +56,10 @@ export default{
 			this.$data.sidebar.classes = this.$data.sidebar.classes.replace('', ' fixed z-40 top-0 transition-all duration-500 left-0 ml-full')
 		}
 		if(this.post == 'top'){
-			this.$data.sidebar.classes = this.$data.sidebar.classes.replace('', ' fixed z-40 transition-all duration-500 top-0 left-0 mt-full')
+			this.$data.sidebar.classes = this.$data.sidebar.classes.replace('', ' fixed z-40 transition-all duration-500 top-0 left-0 mt-full w-full')
 		}
 		if(this.post == 'bottom'){
-			this.$data.sidebar.classes = this.$data.sidebar.classes.replace('', ' fixed z-40 transition-all duration-500 bottom-0 left-0 mb-full')
+			this.$data.sidebar.classes = this.$data.sidebar.classes.replace('', ' fixed z-40 transition-all duration-500 bottom-0 left-0 mb-full w-full')
 		}
 	},
 	methods: {
