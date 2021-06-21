@@ -30,14 +30,9 @@
 	</div>
 	<div class="w-full bg-white border p-3 mt-2">
 		<h5 class="mb-5 font-bold text-2xl">Example Code</h5>
-		<textarea class="w-full max-h-screen overflow-auto focus:outline-none text-sm" style="min-height: 200px;">
-<Collapse type="dark" title="Collapse">
-	Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis modi itaque vitae aspernatur voluptate sint a excepturi, numquam eos provident dolore mollitia impedit deserunt iste, labore facilis harum aperiam voluptatibus.
-</Collapse>
-<Collapse type="primary" title="Collapse">
-	Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis modi itaque vitae aspernatur voluptate sint a excepturi, numquam eos provident dolore mollitia impedit deserunt iste, labore facilis harum aperiam voluptatibus.
-</Collapse>
-		</textarea>
+		<pre class="flex w-full border p-3 focus:outline-none mb-2" contenteditable="">
+			<code class="w-full overflow-auto text-sm" v-html="example.one"></code>
+		</pre>
 	</div>
 	<div class="w-full bg-white border p-3 mt-2">
 		<h5 class="font-bold text-2xl">Refference</h5>
@@ -53,6 +48,22 @@
 </template>
 <script>
 export default{
+	data(){
+		return{
+			example: {
+				one:
+`<pre class="html5" style="font-family:monospace;"><span style="color: #009900;">&lt;Collapse <span style="color: #000066;">type</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;dark&quot;</span> <span style="color: #000066;">title</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;Collapse&quot;</span>&gt;</span>
+	Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis modi itaque vitae aspernatur
+	voluptate sint a excepturi, numquam eos provident dolore mollitia impedit 
+	deserunt iste, labore facilis harum aperiam voluptatibus.
+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>Collapse&gt;</span>
+<span style="color: #009900;">&lt;Collapse <span style="color: #000066;">type</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;primary&quot;</span> <span style="color: #000066;">title</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;Collapse&quot;</span>&gt;</span>
+	Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis modi itaque vitae aspernatur
+	voluptate sint a excepturi
+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>Collapse&gt;</span></pre>`
+			}
+		}
+	},
 	created(){
 		document.title = 'Collapse Component | UI Component Docs'
 	}

@@ -48,16 +48,9 @@
 	</div>
 	<div class="w-full bg-white border p-3 mt-2">
 		<h5 class="mb-5 font-bold text-2xl">Example Code</h5>
-		<textarea class="w-full max-h-screen overflow-auto focus:outline-none text-sm" style="min-height: 200px;">
-<Tabs post="y" type="danger" default="tab-1" :title="[{name: 'tab-1', title: 'Title 1'}, {name: 'tab-2', title: 'Title 2'}]">
-	<template v-slot:tab-1>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eos recusandae aut voluptates, sunt molestiae id quam nesciunt numquam nulla quod eveniet aperiam, voluptate ea illo provident, molestias magnam aliquam!
-	</template>
-	<template v-slot:tab-2>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui explicabo nesciunt nisi dicta nihil maiores nemo consectetur eum. Recusandae autem numquam odio quis modi dignissimos. Corporis cumque possimus eum tempore?
-	</template>
-</Tabs>
-		</textarea>
+		<pre class="flex w-full border p-3 focus:outline-none mb-2" contenteditable="">
+			<code class="w-full overflow-auto text-sm" v-html="example.one"></code>
+		</pre>
 	</div>
 	<div class="w-full bg-white border p-3 mt-2">
 		<h5 class="font-bold text-2xl">Refference</h5>
@@ -81,6 +74,23 @@
 </template>
 <script>
 export default{
+	data(){
+		return{
+			example: {
+				one: 
+`<pre class="html5" style="font-family:monospace;"><span style="color: #009900;">&lt;Tabs post<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;y&quot;</span> <span style="color: #000066;">type</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;danger&quot;</span> default<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;tab-1&quot;</span> :<span style="color: #000066;">title</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;[{name: 'tab-1', title: 'Title 1'}, {name: 'tab-2', title: 'Title 2'}]&quot;</span>&gt;</span>
+	<span style="color: #009900;">&lt;template v-slot:tab-<span style="color: #cc66cc;">1</span>&gt;</span>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eos recusandae aut voluptates,
+		sunt molestiae id quam nesciunt numquam nulla quod eveniet aperiam, voluptate ea illo provident
+	<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span>
+	<span style="color: #009900;">&lt;template v-slot:tab-<span style="color: #cc66cc;">2</span>&gt;</span>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui explicabo nesciunt nisi dicta 
+		nihil maiores nemo consectetur eum. Recusandae autem numquam odio quis modi dignissimos.
+	<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span>
+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>Tabs&gt;</span></pre>`
+			}
+		}
+	},
 	created(){
 		document.title = 'Tabs Component | UI Component Docs'
 	}
