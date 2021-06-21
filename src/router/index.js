@@ -12,6 +12,19 @@ import CollapseDoc from '../views/component/CollapseDoc.vue'
 import ModalDoc from '../views/component/ModalDoc.vue'
 import FirebaseLoginDoc from '../views/page/FirebaseLoginDoc.vue'
 import FirebaseRegisterDoc from '../views/page/FirebaseRegisterDoc.vue'*/
+const GettingStarted = () => import('../views/GettingStarted.vue')
+const AlertDoc = () => import('../views/component/AlertDoc.vue')
+const ButtonDoc = () => import('../views/component/ButtonDoc.vue')
+const CardDoc = () => import('../views/component/CardDoc.vue')
+const DropdownDoc = () => import('../views/component/DropdownDoc.vue')
+const FormDoc = () => import('../views/component/FormDoc.vue')
+const NavDoc = () => import('../views/component/NavDoc.vue')
+const SidebarDoc = () => import('../views/component/SidebarDoc.vue')
+const TabsDoc = () => import('../views/component/TabsDoc.vue')
+const CollapseDoc = () => import('../views/component/CollapseDoc.vue')
+const ModalDoc = () => import('../views/component/ModalDoc.vue')
+const FirebaseLoginDoc = () => import('../views/page/FirebaseLoginDoc.vue')
+const FirebaseRegisterDoc = () => import('../views/page/FirebaseRegisterDoc.vue')
 
 const routes = [
   {
@@ -22,67 +35,67 @@ const routes = [
   {
     path: '/docs/getting-started',
     name: 'GettingStarted',
-    component: import('../views/GettingStarted.vue')
+    component: GettingStarted
   },
   {
     path: '/component/alert',
     name: 'AlertDoc',
-    component: import('../views/component/AlertDoc.vue')
+    component: AlertDoc
   },
   {
     path: '/component/button',
     name: 'ButtonDoc',
-    component: import('../views/component/ButtonDoc.vue')
+    component: ButtonDoc
   },
   {
     path: '/component/card',
     name: 'CardDoc',
-    component: import('../views/component/CardDoc.vue')
+    component: CardDoc
   },
   {
     path: '/component/dropdown',
     name: 'DropdownDoc',
-    component: import('../views/component/DropdownDoc.vue')
+    component: DropdownDoc
   },
   {
     path: '/component/form',
     name: 'FormDoc',
-    component: import('../views/component/FormDoc.vue')
+    component: FormDoc
   },
   {
     path: '/component/nav',
     name: 'NavDoc',
-    component: import('../views/component/NavDoc.vue')
+    component: NavDoc
   },
   {
     path: '/component/sidebar',
     name: 'SidebarDoc',
-    component: import('../views/component/SidebarDoc.vue')
+    component: SidebarDoc
   },
   {
     path: '/component/tabs',
     name: 'TabsDoc',
-    component: import('../views/component/TabsDoc.vue')
+    component: TabsDoc
   },
   {
     path: '/component/collapse',
     name: 'CollapseDoc',
-    component: import('../views/component/CollapseDoc.vue')
+    component: CollapseDoc
   },
   {
     path: '/component/modal',
     name: 'ModalDoc',
-    component: import('../views/component/ModalDoc.vue')
+    component: ModalDoc
   },
   {
     path: '/page/firebase-login',
     name: 'FirebaseLoginDoc',
-    component: import('../views/page/FirebaseLoginDoc.vue')
+    component: FirebaseLoginDoc
   },
   {
     path: '/page/firebase-register',
     name: 'FirebaseRegisterDoc',
-    component: import('../views/page/FirebaseRegisterDoc.vue')
+    component: FirebaseRegisterDoc
   },
 ]
 

@@ -74,7 +74,9 @@
 			</div>
 			<div class="w-full md:w-1/5 mb-2"></div>
 			<div class="w-full md:w-4/5">
-				<router-view/>
+				<transition name="slide-right">
+					<router-view/>
+				</transition>
 			</div>
 		</div>
 	</div>
