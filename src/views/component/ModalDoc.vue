@@ -17,7 +17,7 @@
 						Header
 					</template>
 					<template v-slot:default>
-						Hello World
+						<p v-for="d in 120" v-bind:key="d">Hello World</p>
 					</template>
 				</Modal>
 			</div>
@@ -32,6 +32,9 @@
 </template>
 <script>
 export default{
+	created(){
+		document.title = 'Modal Component | UI Component Docs'
+	},
 	data(){
 		return{
 			example: {

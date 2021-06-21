@@ -32,11 +32,22 @@
 			
 		</div>
 		<div class="w-full bg-white border p-3 mt-2">
-		<h5 class="mb-5 font-bold text-2xl">Example Code</h5>
-		<pre class="flex w-full border p-3 focus:outline-none mb-2" contenteditable="">
-			<code class="w-full overflow-auto text-sm" v-html="example.one"></code>
-		</pre>
-	</div>
+			<h5 class="mb-5 font-bold text-2xl">Example Code</h5>
+			<pre class="flex w-full border p-3 focus:outline-none mb-2" contenteditable="">
+				<code class="w-full overflow-auto text-sm" v-html="example.one"></code>
+			</pre>
+		</div>
+		<div class="w-full bg-white border p-3 mt-2">
+			<h5 class="font-bold text-2xl">Refference</h5>
+			<div class="w-full border-b py-2">
+				<h5 class="font-medium mb-1"><code>type (String)</code></h5>
+				<p class="text-sm">A type of navbar. List type: error, success, warning, dark, light, secondary, top-fixed-primary, top-fixed-danger, top-fixed-success,
+				top-fixed-warning, top-fixed-dark, top-fixed-light, top-fixed-secondary, bottom-fixed-primary, bottom-fixed-danger,
+				bottom-fixed-success, bottom-fixed-warning, bottom-fixed-dark, bottom-fixed-light, bottom-fixed-secondary, top-absolute-primary, top-absolute-danger, 
+				top-absolute-success, top-absolute-warning, top-absolute-dark, top-absolute-light, top-absolute-secondary
+				</p>
+			</div>
+		</div>
 	</div>
 </template>
 <script>
