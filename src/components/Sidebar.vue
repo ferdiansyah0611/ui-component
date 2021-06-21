@@ -5,7 +5,7 @@
 	<div :id="id" class="menu">
 		<div @click="action" class="opacity bg-black bg-opacity-50 h-screen top-0 left-0 w-full z-30 fixed overflow-auto cursor-pointer hidden"></div>
 		<div v-if="this.post == 'right' || this.post == 'left'" :class="sidebar.classes">
-			<div class="bg-white w-48 h-screen overflow-auto text-black">
+			<div :class="w ? 'w-' + w + ' bg-white h-screen overflow-auto text-black': 'bg-white w-48 h-screen overflow-auto text-black'">
 				<div class="p-3 font-bold text-center">
 					<slot name="head"></slot>
 				</div>
@@ -38,6 +38,10 @@ export default{
 			type: String,
 			required: true
 		},
+		w: {
+			type: String,
+			required: false
+		},
 	},
 	data(){
 		return{
@@ -69,6 +73,7 @@ export default{
 			const body = document.querySelector(`#${this.id}>.body`)
 			if(!this.open){
 				this.open = true
+				document.body.classList.add('overflow-hidden')
 				opacity.classList.remove('hidden')
 				if(this.post == 'right'){
 					body.classList.remove('mr-full')
@@ -84,6 +89,7 @@ export default{
 				}
 			}else{
 				this.open = false
+				document.body.classList.remove('overflow-hidden')
 				opacity.classList.add('hidden')
 				if(this.post == 'right'){
 					body.classList.add('mr-full')

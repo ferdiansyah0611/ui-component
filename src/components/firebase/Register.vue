@@ -9,9 +9,6 @@
 			<form @submit="submit">
 				<div class="mt-2">
 					<img v-if="avatarDisplay" :src="avatarDisplay" alt="avatar" class="w-full">
-					<div v-else class="bg-gray-200 p-10">
-						<p class="text-center">Profile Show In Here</p>
-					</div>
 				</div>
 				<div class="mt-2">
 					<p class="text-gray-500">Username</p>
@@ -61,6 +58,7 @@
 					role="submit"
 				>Submit</Button>
 			</form>
+			<p class="mt-2">Have a account ? <router-link class="hover:underline" to="/login">Login</router-link></p>
 		</div>
 	</div>
 </template>

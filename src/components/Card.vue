@@ -13,13 +13,13 @@
 </template>
 <script>
 const list = [
-	{type: 'primary', cls: 'bg-blue-500 text-white border flex flex-wrap p-2 sm:p-3 shadow-md'},
-	{type: 'danger', cls: 'bg-red-500 text-white border flex flex-wrap p-2 sm:p-3 shadow-md'},
-	{type: 'success', cls: 'bg-green-500 text-white border flex flex-wrap p-2 sm:p-3 shadow-md'},
-	{type: 'warning', cls: 'bg-yellow-500 text-white border flex flex-wrap p-2 sm:p-3 shadow-md'},
-	{type: 'dark', cls: 'bg-black text-white border flex flex-wrap p-2 sm:p-3 shadow-md'},
-	{type: 'light', cls: 'bg-white text-black border flex flex-wrap p-2 sm:p-3 shadow-md'},
-	{type: 'secondary', cls: 'bg-gray-200 text-black border flex flex-wrap p-2 sm:p-3 shadow-md'},
+	{type: 'primary', cls: 'bg-blue-500 text-white flex flex-wrap p-2 sm:p-3 shadow-md'},
+	{type: 'danger', cls: 'bg-red-500 text-white flex flex-wrap p-2 sm:p-3 shadow-md'},
+	{type: 'success', cls: 'bg-green-500 text-white flex flex-wrap p-2 sm:p-3 shadow-md'},
+	{type: 'warning', cls: 'bg-yellow-500 text-white flex flex-wrap p-2 sm:p-3 shadow-md'},
+	{type: 'dark', cls: 'bg-black text-white flex flex-wrap p-2 sm:p-3 shadow-md'},
+	{type: 'light', cls: 'bg-white text-black flex flex-wrap p-2 sm:p-3 shadow-md'},
+	{type: 'secondary', cls: 'bg-gray-200 text-black flex flex-wrap p-2 sm:p-3 shadow-md'},
 ]
 export default{
 	name: 'Cards UI',

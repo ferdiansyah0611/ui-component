@@ -59,6 +59,7 @@
 				>Google</Button>
 			</div>
 		</form>
+		<p class="mt-2">Don't have a account ? <router-link class="hover:underline" to="/register">Register</router-link></p>
 	</div>
 </template>
 <script>
