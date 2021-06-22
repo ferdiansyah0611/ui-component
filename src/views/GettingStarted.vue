@@ -1,27 +1,37 @@
 <template>
-	<div class="bg-white p-3">
-		<h5 class="font-bold text-2xl mb-2">Getting Started</h5>
-		<p>Get started with UI Component, the best library ui component for faster development.</p>
-		<h5 class="font-bold text-xl mb-2">Installation for VueJS</h5>
-		<div class="bg-gray-100 p-3 mb-2 text-sm">
-			<code><span class="text-blue-600">vue</span> create my-app</code>
-		</div>
-		<div class="bg-gray-100 p-3 mb-2 text-sm">
-			<code><span class="text-blue-600">cd</span> my-app</code>
-		</div>
-		<div class="bg-gray-100 p-3 mb-2 text-sm">
-			<code><span class="text-blue-600">vue</span> add tailwind</code>
-		</div>
-		<div class="bg-gray-100 p-3 mb-2 text-sm">
-			<code><span class="text-blue-600">npm i</span> ui-component-vue</code>
-		</div>
-		<pre class="flex w-full border p-3 focus:outline-none mb-2" contenteditable="">
-			<code class="w-full overflow-auto text-sm" v-html="example.one"></code>
-		</pre>
-		<div class="bg-gray-100 p-3 mb-2 text-sm">
-			<code><span class="text-blue-600">npm</span> run serve</code>
-		</div>
-	</div>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl">Getting Started</h5>
+		</template>
+		<template v-slot:content>
+			<p>Get started with UI Component, the best library ui component for faster development.</p>
+		</template>
+	</Cards>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl">Installation for VueJS</h5>
+		</template>
+		<template v-slot:content>
+			<div class="bg-gray-100 p-3 mb-2 text-sm">
+				<code><span class="text-blue-600">vue</span> create my-app</code>
+			</div>
+			<div class="bg-gray-100 p-3 mb-2 text-sm">
+				<code><span class="text-blue-600">cd</span> my-app</code>
+			</div>
+			<div class="bg-gray-100 p-3 mb-2 text-sm">
+				<code><span class="text-blue-600">vue</span> add tailwind</code>
+			</div>
+			<div class="bg-gray-100 p-3 mb-2 text-sm">
+				<code><span class="text-blue-600">npm i</span> ui-component-vue</code>
+			</div>
+			<pre class="flex w-full border p-3 focus:outline-none mb-2" contenteditable="">
+				<code class="w-full overflow-auto text-sm" v-html="example.one"></code>
+			</pre>
+			<div class="bg-gray-100 p-3 mb-2 text-sm">
+				<code><span class="text-blue-600">npm</span> run serve</code>
+			</div>
+		</template>
+	</Cards>
 </template>
 <script>
 export default{

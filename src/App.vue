@@ -78,13 +78,13 @@
 			<div class="w-full md:w-4/5">
 				<router-view/>
 				<div class="mt-4">
-					<Footer pos="default" color="bg-indigo-400">
+					<Footer pos="default" color="">
 						<template v-slot:left>
-							<p class="p-4">&copy; {{new Date().getFullYear()}} Ferdiansyah0611 Corporation</p>
+							<p class="py-4 text-black">&copy; {{new Date().getFullYear()}} Ferdiansyah0611 Corporation</p>
 						</template>
 						<template v-slot:right>
-							<a href="/" class="p-4 hover:bg-indigo-500">Privacy & Policy</a>
-							<a href="." class="p-4 hover:bg-indigo-500">MIT License</a>
+							<a href="/" class="p-4 text-black hover:bg-gray-200">Privacy & Policy</a>
+							<a href="." class="p-4 text-black hover:bg-gray-200">MIT License</a>
 						</template>
 					</Footer>
 				</div>

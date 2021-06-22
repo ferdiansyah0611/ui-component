@@ -1,141 +1,155 @@
 <template>
-	<div class="w-full">
-		<div class="border p-3 bg-white">
+	<Cards type="light">
+		<template v-slot:head>
 			<h5 class="font-bold text-2xl"># Card Component</h5>
-			<p class="md:text-xl tracking-wide pt-2">A card is a flexible and extensible content 
-				container.
-			</p>
-			
-		</div>
-		<div class="my-2">
-			<div class="flex flex-wrap">
-				<div class="w-full sm:w-1/2 md:w-1/3 mt-1 md:mt-0">
-					<Cards type="primary">
-						<template v-slot:head>
-							<h5>Primary</h5>
-						</template>
-						<template v-slot:content>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</template>
-					</Cards>
+		</template>
+		<template v-slot:content>
+			<p class="text-xl tracking-wide">A card is a flexible and extensible content container.</p>
+		</template>
+	</Cards>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl"># Display</h5>
+		</template>
+		<template v-slot:content>
+			<div class="my-2">
+				<div class="flex flex-wrap">
+					<div class="w-full sm:w-1/2 md:w-1/3 mt-1 md:mt-0">
+						<Cards type="primary">
+							<template v-slot:head>
+								<h5>Primary</h5>
+							</template>
+							<template v-slot:content>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</template>
+						</Cards>
+					</div>
+					<div class="w-full sm:w-1/2 md:w-1/3 mt-1 md:mt-0">
+						<Cards type="danger">
+							<template v-slot:head>
+								<h5>Danger</h5>
+							</template>
+							<template v-slot:content>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</template>
+						</Cards>
+					</div>
+					<div class="w-full sm:w-1/2 md:w-1/3 mt-1 md:mt-0">
+						<Cards type="light">
+							<template v-slot:head>
+								<h5>Light</h5>
+							</template>
+							<template v-slot:content>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</template>
+						</Cards>
+					</div>
 				</div>
-				<div class="w-full sm:w-1/2 md:w-1/3 mt-1 md:mt-0">
-					<Cards type="danger">
-						<template v-slot:head>
-							<h5>Danger</h5>
-						</template>
-						<template v-slot:content>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</template>
-					</Cards>
+				<!--  -->
+				<div class="flex flex-wrap lg:flex-nowrap">
+					<div class="w-full md:w-1/2 mt-1 md:mt-0">
+						<Cards type="primary">
+							<template v-slot:head>
+								<h5>Primary</h5>
+							</template>
+							<template v-slot:content>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</template>
+							<template v-slot:footer>
+								<Button type="light">Save</Button>
+								<Button type="danger">Delete</Button>
+							</template>
+						</Cards>
+					</div>
+					<div class="w-full md:w-1/2 mt-1 md:mt-0">
+						<Cards type="danger">
+							<template v-slot:head>
+								<h5>Danger</h5>
+							</template>
+							<template v-slot:content>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</template>
+							<template v-slot:footer>
+								<Button type="light">Save</Button>
+								<Button type="danger">Delete</Button>
+							</template>
+						</Cards>
+					</div>
+					<div class="w-full md:w-1/2 mt-1 md:mt-0">
+						<Cards type="light">
+							<template v-slot:head>
+								<h5>Light</h5>
+							</template>
+							<template v-slot:content>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</template>
+							<template v-slot:footer>
+								<Button type="light">Save</Button>
+								<Button type="danger">Delete</Button>
+							</template>
+						</Cards>
+					</div>
 				</div>
-				<div class="w-full sm:w-1/2 md:w-1/3 mt-1 md:mt-0">
-					<Cards type="light">
-						<template v-slot:head>
-							<h5>Light</h5>
-						</template>
-						<template v-slot:content>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</template>
-					</Cards>
+				<!--  -->
+				<div class="flex flex-wrap lg:flex-nowrap">
+					<div class="w-full sm:w-1/2 md:w-1/2 mt-1 md:mt-0">
+						<Cards type="danger">
+							<template v-slot:head>
+								<img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+								<h5 class="mt-2">Danger</h5>
+							</template>
+							<template v-slot:content>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</template>
+						</Cards>
+					</div>
+					<div class="w-full sm:w-1/2 md:w-1/2 mt-1 md:mt-0">
+						<Cards type="light">
+							<template v-slot:head>
+								<img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+								<h5 class="mt-2">Light</h5>
+							</template>
+							<template v-slot:content>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</template>
+						</Cards>
+					</div>
+					<div class="w-full sm:w-1/2 md:w-1/2 mt-1 md:mt-0">
+						<Cards type="success">
+							<template v-slot:head>
+								<img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+								<h5 class="mt-2">Success</h5>
+							</template>
+							<template v-slot:content>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</template>
+						</Cards>
+					</div>
 				</div>
 			</div>
-			<!--  -->
-			<div class="flex flex-wrap lg:flex-nowrap">
-				<div class="w-full md:w-1/2 mt-1 md:mt-0">
-					<Cards type="primary">
-						<template v-slot:head>
-							<h5>Primary</h5>
-						</template>
-						<template v-slot:content>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</template>
-						<template v-slot:footer>
-							<Button type="light">Save</Button>
-							<Button type="danger">Delete</Button>
-						</template>
-					</Cards>
-				</div>
-				<div class="w-full md:w-1/2 mt-1 md:mt-0">
-					<Cards type="danger">
-						<template v-slot:head>
-							<h5>Danger</h5>
-						</template>
-						<template v-slot:content>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</template>
-						<template v-slot:footer>
-							<Button type="light">Save</Button>
-							<Button type="danger">Delete</Button>
-						</template>
-					</Cards>
-				</div>
-				<div class="w-full md:w-1/2 mt-1 md:mt-0">
-					<Cards type="light">
-						<template v-slot:head>
-							<h5>Light</h5>
-						</template>
-						<template v-slot:content>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</template>
-						<template v-slot:footer>
-							<Button type="light">Save</Button>
-							<Button type="danger">Delete</Button>
-						</template>
-					</Cards>
-				</div>
+		</template>
+	</Cards>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl">Example Code</h5>
+		</template>
+		<template v-slot:content>
+			<pre class="flex w-full border p-3 focus:outline-none mb-2" contenteditable="">
+				<code class="w-full overflow-auto text-sm" v-html="example.one"></code>
+			</pre>
+		</template>
+	</Cards>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl">Refference</h5>
+		</template>
+		<template v-slot:content>
+			<div class="w-full border-b py-2">
+				<h5 class="font-medium mb-1"><code>type (String)</code></h5>
+				<p class="text-sm">A type of card. List type: error, success, warning, dark, light, secondary, and custom.</p>
 			</div>
-			<!--  -->
-			<div class="flex flex-wrap lg:flex-nowrap">
-				<div class="w-full sm:w-1/2 md:w-1/2 mt-1 md:mt-0">
-					<Cards type="danger">
-						<template v-slot:head>
-							<img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-							<h5 class="mt-2">Danger</h5>
-						</template>
-						<template v-slot:content>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</template>
-					</Cards>
-				</div>
-				<div class="w-full sm:w-1/2 md:w-1/2 mt-1 md:mt-0">
-					<Cards type="light">
-						<template v-slot:head>
-							<img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-							<h5 class="mt-2">Light</h5>
-						</template>
-						<template v-slot:content>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</template>
-					</Cards>
-				</div>
-				<div class="w-full sm:w-1/2 md:w-1/2 mt-1 md:mt-0">
-					<Cards type="success">
-						<template v-slot:head>
-							<img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
-							<h5 class="mt-2">Success</h5>
-						</template>
-						<template v-slot:content>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</template>
-					</Cards>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="w-full bg-white border p-3 mt-2">
-		<h5 class="mb-5 font-bold text-2xl">Example Code</h5>
-		<pre class="flex w-full border p-3 focus:outline-none mb-2" contenteditable="">
-			<code class="w-full overflow-auto text-sm" v-html="example.one"></code>
-		</pre>
-	</div>
-	<div class="w-full bg-white border p-3 mt-2">
-		<h5 class="font-bold text-2xl">Refference</h5>
-		<div class="w-full border-b py-2">
-			<h5 class="font-medium mb-1"><code>type (String)</code></h5>
-			<p class="text-sm">A type of card. List type: error, success, warning, dark, light, secondary, and custom.</p>
-		</div>
-	</div>
+		</template>
+	</Cards>
 </template>
 <script>
 export default{

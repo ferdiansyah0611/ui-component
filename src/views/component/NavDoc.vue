@@ -1,8 +1,17 @@
 <template>
-	<div>
-		<div class="bg-white w-full border">
-			<h5 class="mb-3 font-bold text-2xl p-3"># Nav Component</h5>
-			<p class="text-xl tracking-wide px-3">Documentation and examples for how to use UI Component included navigation components.</p>
+	<Cards type="light">
+		<template v-slot:head>
+			<h5 class="font-bold text-2xl"># Nav Component</h5>
+		</template>
+		<template v-slot:content>
+			<p class="text-xl tracking-wide">Documentation and examples for how to use UI Component included navigation components.</p>
+		</template>
+	</Cards>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl"># Display</h5>
+		</template>
+		<template v-slot:content>
 			<div class="p-2 w-full" v-for="(data, key) in nav" v-bind:key="key">
 				<Navbar :type="data.name">
 					<template v-slot:navs>
@@ -29,16 +38,23 @@
 					</template>
 				</Navbar>
 			</div>
-			
-		</div>
-		<div class="w-full bg-white border p-3 mt-2">
-			<h5 class="mb-5 font-bold text-2xl">Example Code</h5>
+		</template>
+	</Cards>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl">Example Code</h5>
+		</template>
+		<template v-slot:content>
 			<pre class="flex w-full border p-3 focus:outline-none mb-2" contenteditable="">
 				<code class="w-full overflow-auto text-sm" v-html="example.one"></code>
 			</pre>
-		</div>
-		<div class="w-full bg-white border p-3 mt-2">
-			<h5 class="font-bold text-2xl">Refference</h5>
+		</template>
+	</Cards>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl">Refference</h5>
+		</template>
+		<template v-slot:content>
 			<div class="w-full border-b py-2">
 				<h5 class="font-medium mb-1"><code>type (String)</code></h5>
 				<p class="text-sm">A type of navbar. List type: error, success, warning, dark, light, secondary, top-fixed-primary, top-fixed-danger, top-fixed-success,
@@ -47,8 +63,8 @@
 				top-absolute-success, top-absolute-warning, top-absolute-dark, top-absolute-light, top-absolute-secondary
 				</p>
 			</div>
-		</div>
-	</div>
+		</template>
+	</Cards>
 </template>
 <script>
 export default{

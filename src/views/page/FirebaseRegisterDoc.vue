@@ -1,20 +1,22 @@
 <template>
-	<div>
-		<div class="flex justify-center">
-<FirebaseRegister
-	title="Register Firebase"
-	aggre="Accepted to aggrement"
-	redirect="/"
-	:config="{}"
-/>
-		</div>
-		<div class="w-full bg-white border p-3 mt-2">
-			<h5 class="mb-5 font-bold text-2xl">Example Code</h5>
+	<div class="flex justify-center">
+		<FirebaseRegister
+			title="Register Firebase"
+			aggre="Accepted to aggrement"
+			redirect="/"
+			:config="{}"
+		/>
+	</div>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl">Example Code</h5>
+		</template>
+		<template v-slot:content>
 			<pre class="flex w-full border p-3 focus:outline-none mb-2" contenteditable="">
 				<code class="w-full overflow-auto text-sm" v-html="example"></code>
 			</pre>
-		</div>
-	</div>
+		</template>
+	</Cards>
 </template>
 <script>
 import FirebaseRegister from '@/components/firebase/Register'

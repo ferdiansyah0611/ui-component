@@ -1,8 +1,17 @@
 <template>
-	<div>
-		<div class="bg-white w-full border p-3">
-			<h5 class="mb-3 font-bold text-2xl"># Sidebar Component</h5>
+	<Cards type="light">
+		<template v-slot:head>
+			<h5 class="font-bold text-2xl"># Sidebar Component</h5>
+		</template>
+		<template v-slot:content>
 			<p class="text-xl tracking-wide">Use UI Components custom sidebar styles for actions in navigations.</p>
+		</template>
+	</Cards>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl"># Display</h5>
+		</template>
+		<template v-slot:content>
 			<div class="flex flex-wrap">
 				<Sidebar w="60" post="left" p="4">
 					<template v-slot:head>
@@ -57,14 +66,41 @@
 					</template>
 				</Sidebar>
 			</div>
-		</div>
-		<div class="w-full bg-white border p-3 mt-2">
-			<h5 class="mb-5 font-bold text-2xl">Example Code</h5>
+		</template>
+	</Cards>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl">Example Code</h5>
+		</template>
+		<template v-slot:content>
 			<pre class="flex w-full border p-3 focus:outline-none mb-2" contenteditable="">
 				<code class="w-full overflow-auto text-sm" v-html="example.one"></code>
 			</pre>
-		</div>
-	</div>
+		</template>
+	</Cards>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl">Refference</h5>
+		</template>
+		<template v-slot:content>
+			<div class="w-full border-b py-2">
+				<h5 class="font-medium mb-1 text-sm md:text-base"><code>post (String)</code></h5>
+				<p class="text-sm">A position of sidebar. List position: top, left, right, bottom.</p>
+			</div>
+			<div class="w-full border-b py-2">
+				<h5 class="font-medium mb-1 text-sm md:text-base"><code>color (String)</code></h5>
+				<p class="text-sm">Class bacground-color.</p>
+			</div>
+			<div class="w-full border-b py-2">
+				<h5 class="font-medium mb-1 text-sm md:text-base"><code>p (String)</code></h5>
+				<p class="text-sm">Class padding for button.</p>
+			</div>
+			<div class="w-full border-b py-2">
+				<h5 class="font-medium mb-1 text-sm md:text-base"><code>w (String)</code></h5>
+				<p class="text-sm">Class width for sidebar.</p>
+			</div>
+		</template>
+	</Cards>
 </template>
 <script>
 export default{

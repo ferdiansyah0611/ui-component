@@ -1,10 +1,14 @@
 <template>
-	<div class="w-full bg-white p-3 mt-2 shadow">
-		<h1 class="text-2xl font-bold mb-5">UI Component</h1>
-		<p class="text-xl mt-3">
-			Open source components framework based on UI Component Web App.
-		</p>
-	</div>
+	<Cards type="light">
+		<template v-slot:head>
+			<h1 class="text-2xl font-bold">UI Component</h1>
+		</template>
+		<template v-slot:content>
+			<p class="text-xl">
+				Open source components framework based on UI Component Web App.
+			</p>
+		</template>
+	</Cards>
 	<div class="grid grid-rows-1 sm:grid-rows-2 md:grid-flow-col gap-2 mt-5">
 		<Cards class="mt-2 md:mt-0" type="light">
 			<template v-slot:head>

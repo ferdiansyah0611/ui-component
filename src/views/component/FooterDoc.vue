@@ -1,42 +1,58 @@
 <template>
-	<div class="w-full bg-white border p-3">
-		<h5 class="mb-3 font-bold text-2xl"># Footer Component</h5>
-		<p class="text-xl tracking-wide">Use UI Components custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
-	</div>
-	<div class="w-full bg-white border p-3 mt-2">
-		<h5 class="mb-5 font-bold text-2xl"># Display</h5>
-		<div class="flex w-full flex-wrap mt-2 space-y-2">
-			<Footer pos="default" color="bg-blue-800">
-				<template v-slot:left>
-					<p class="p-4">&copy; {{new Date().getFullYear()}}</p>
-				</template>
-				<template v-slot:right>
-					<a href="/" class="p-4 hover:bg-blue-900">Privacy & Policy</a>
-					<a href="." class="p-4 hover:bg-blue-900">MIT License</a>
-				</template>
-			</Footer>
-			<Footer pos="center" color="bg-red-400">
-				<p class="p-4">&copy; {{new Date().getFullYear()}} Ferdiansyah0611 Corporation</p>
-			</Footer>
-		</div>
-	</div>
-	<div class="w-full bg-white border p-3 mt-2">
-		<h5 class="mb-5 font-bold text-2xl">Example Code</h5>
-		<pre class="flex w-full border p-3 focus:outline-none mb-2" contenteditable="">
-			<code class="w-full overflow-auto text-sm" v-html="example.one"></code>
-		</pre>
-	</div>
-	<div class="w-full bg-white border p-3 mt-2">
-		<h5 class="font-bold text-2xl">Refference</h5>
-		<div class="w-full border-b py-2">
-			<h5 class="font-medium mb-1 text-sm md:text-base"><code>pos (String)</code></h5>
-			<p class="text-sm">A position of footer. List position: default, center.</p>
-		</div>
-		<div class="w-full border-b py-2">
-			<h5 class="font-medium mb-1 text-sm md:text-base"><code>color (String)</code></h5>
-			<p class="text-sm">Class bacground-color.</p>
-		</div>
-	</div>
+	<Cards type="light">
+		<template v-slot:head>
+			<h5 class="font-bold text-2xl"># Footer Component</h5>
+		</template>
+		<template v-slot:content>
+			<p class="text-xl tracking-wide">Use UI Components custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
+		</template>
+	</Cards>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl"># Display</h5>
+		</template>
+		<template v-slot:content>
+			<div class="flex w-full flex-wrap mt-2 space-y-2">
+				<Footer pos="default" color="bg-blue-800">
+					<template v-slot:left>
+						<p class="p-4">&copy; {{new Date().getFullYear()}}</p>
+					</template>
+					<template v-slot:right>
+						<a href="/" class="p-4 hover:bg-blue-900">Privacy & Policy</a>
+						<a href="." class="p-4 hover:bg-blue-900">MIT License</a>
+					</template>
+				</Footer>
+				<Footer pos="center" color="bg-red-400">
+					<p class="p-4">&copy; {{new Date().getFullYear()}} Ferdiansyah0611 Corporation</p>
+				</Footer>
+			</div>
+		</template>
+	</Cards>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl">Example Code</h5>
+		</template>
+		<template v-slot:content>
+			<pre class="flex w-full border p-3 focus:outline-none mb-2" contenteditable="">
+				<code class="w-full overflow-auto text-sm" v-html="example.one"></code>
+			</pre>
+		</template>
+	</Cards>
+	<Cards class="mt-2" type="light">
+		<template v-slot:head>
+			<h5 class="text-2xl">Refference</h5>
+		</template>
+		<template v-slot:content>
+			<div class="w-full border-b py-2">
+				<h5 class="font-medium mb-1 text-sm md:text-base"><code>pos (String)</code></h5>
+				<p class="text-sm">A position of footer. List position: default, center.</p>
+			</div>
+			<div class="w-full border-b py-2">
+				<h5 class="font-medium mb-1 text-sm md:text-base"><code>color (String)</code></h5>
+				<p class="text-sm">Class bacground-color.</p>
+			</div>
+		</template>
+	</Cards>
 </template>
 <script>
 export default{
