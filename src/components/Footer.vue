@@ -1,9 +1,9 @@
 <template>
 	<div v-if="pos === 'default'" :class="'w-full flex text-white ' + color">
-		<div class="w-1/2 flex">
+		<div class="w-full md:w-1/2 flex">
 			<slot name="left"></slot>
 		</div>
-		<div class="w-1/2 flex justify-end">
+		<div class="w-full md:w-1/2 flex justify-end">
 			<slot name="right"></slot>
 		</div>
 	</div>

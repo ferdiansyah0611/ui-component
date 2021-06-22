@@ -32,6 +32,7 @@
 							<router-link to="/component/tabs" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-100">Tabs</router-link>
 							<router-link to="/component/collapse" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-100">Collapse</router-link>
 							<router-link to="/component/modal" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-100">Modal</router-link>
+							<router-link to="/component/footer" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-100">Footer</router-link>
 						</Collapse>
 						<Collapse class="w-full font-medium text-center" type="light" title="Page">
 							<router-link to="/page/firebase-login" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-100">Firebase Login</router-link>
