@@ -66,6 +66,7 @@
 					<router-link to="/component/tabs" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-100">Tabs</router-link>
 					<router-link to="/component/collapse" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-100">Collapse</router-link>
 					<router-link to="/component/modal" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-100">Modal</router-link>
+					<router-link to="/component/footer" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-100">Footer</router-link>
 					<h5 class="font-bold p-3">Page</h5>
 					<router-link to="/page/firebase-login" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-100">Firebase > Login</router-link>
 					<router-link to="/page/firebase-register" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-100">Firebase > Register</router-link>
@@ -74,9 +75,18 @@
 			</div>
 			<div class="w-full md:w-1/5 mb-2"></div>
 			<div class="w-full md:w-4/5">
-				<transition name="slide-right">
-					<router-view/>
-				</transition>
+				<router-view/>
+				<div class="mt-4">
+					<Footer pos="default" color="bg-indigo-400">
+						<template v-slot:left>
+							<p class="p-4">&copy; {{new Date().getFullYear()}} Ferdiansyah0611 Corporation</p>
+						</template>
+						<template v-slot:right>
+							<a href="/" class="p-4 hover:bg-indigo-500">Privacy & Policy</a>
+							<a href="." class="p-4 hover:bg-indigo-500">MIT License</a>
+						</template>
+					</Footer>
+				</div>
 			</div>
 		</div>
 	</div>
