@@ -13,6 +13,7 @@ const TabsDoc = () => import('../views/component/TabsDoc.vue')
 const CollapseDoc = () => import('../views/component/CollapseDoc.vue')
 const ModalDoc = () => import('../views/component/ModalDoc.vue')
 const FooterDoc = () => import('../views/component/FooterDoc.vue')
+const AppBarDoc = () => import('../views/component/AppBarDoc.vue')
 const FirebaseLoginDoc = () => import('../views/page/FirebaseLoginDoc.vue')
 const FirebaseRegisterDoc = () => import('../views/page/FirebaseRegisterDoc.vue')
 
@@ -81,6 +82,11 @@ const routes = [
     path: '/component/footer',
     name: 'FooterDoc',
     component: FooterDoc
+  },
+  {
+    path: '/component/app-bar',
+    name: 'AppBarDoc',
+    component: AppBarDoc
   },
   {
     path: '/page/firebase-login',

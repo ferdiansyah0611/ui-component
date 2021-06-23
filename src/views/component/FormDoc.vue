@@ -16,6 +16,16 @@
 				<div class="p-2 w-full">
 					<div class="flex space-x-1 w-full flex-wrap md:flex-nowrap">
 						<div class="w-full">
+							<p class="w-full mb-2 mt-2 text-sm sm:text-base">Text UI Type</p>
+							<Text :ui="true" type="text" place="My input..." v-model:txt="example.text"></Text>	
+						</div>
+						<div class="w-full">
+							<p class="w-full mb-2 mt-2 text-sm sm:text-base">Text UI Type Disabled</p>
+							<Text :ui="true" :disabled="true" type="text" place="My input..." v-model:txt="example.text"></Text>
+						</div>
+					</div>
+					<div class="flex space-x-1 w-full flex-wrap md:flex-nowrap">
+						<div class="w-full">
 							<p class="w-full mb-2 mt-2 text-sm sm:text-base">Text Type</p>
 							<Text type="text" place="My input..." v-model:txt="example.text"></Text>	
 						</div>
@@ -36,6 +46,20 @@
 					</div>
 				</div>
 				<div class="p-2 w-full">
+					<div class="flex space-x-1 w-full flex-wrap md:flex-nowrap">
+						<div class="w-full">	
+							<p class="w-full mb-2 mt-2 text-sm sm:text-base">Textarea UI Type</p>
+							<div class="flex w-full">
+								<Area :ui="true" place="My textarea..." v-model:txt="example.area"></Area>
+							</div>
+						</div>
+						<div class="w-full">
+							<p class="w-full mb-2 mt-2 text-sm sm:text-base">Textarea UI Type Disabled</p>
+							<div class="flex w-full">
+								<Area :ui="true" :disabled="true" place="My textarea..." v-model:txt="example.area"></Area>
+							</div>
+						</div>
+					</div>
 					<div class="flex space-x-1 w-full flex-wrap md:flex-nowrap">
 						<div class="w-full">	
 							<p class="w-full mb-2 mt-2 text-sm sm:text-base">Textarea Type</p>
@@ -122,6 +146,14 @@
 			<div class="w-full border-b py-2">
 				<h5 class="font-medium mb-1 text-sm md:text-base"><code>type (String)</code></h5>
 				<p class="text-sm">A type of input.</p>
+			</div>
+			<div class="w-full border-b py-2">
+				<h5 class="font-medium mb-1 text-sm md:text-base"><code>ui (Boolean)</code></h5>
+				<p class="text-sm">Activate border-b with color on focus.</p>
+			</div>
+			<div class="w-full border-b py-2">
+				<h5 class="font-medium mb-1 text-sm md:text-base"><code>color (String)</code></h5>
+				<p class="text-sm">Custom color class if ui activated.</p>
 			</div>
 			<div class="w-full border-b py-2">
 				<h5 class="font-medium mb-1 text-sm md:text-base"><code>place (String)</code></h5>

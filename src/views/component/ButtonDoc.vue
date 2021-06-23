@@ -100,6 +100,55 @@
 						<span class="font-medium">Icon</span>
 					</ButtonIcon>
 				</div>
+				<div class="p-2 w-16">
+					<Button :float="true" class="w-full" type="primary">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+					</Button>
+				</div>
+				<div class="p-2 w-16">
+					<Button :float="true" class="w-full" type="danger">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+					</Button>
+				</div>
+				<div class="p-2 w-16">
+					<Button :float="true" class="w-full" type="success">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+					</Button>
+				</div>
+				<div class="p-2 w-16">
+					<Button :float="true" class="w-full" type="warning">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+					</Button>
+				</div>
+				<div class="p-2 w-16">
+					<Button :float="true" class="w-full" type="dark">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+					</Button>
+				</div>
+				<div class="p-2 w-16">
+					<Button :float="true" class="w-full" type="light">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+					</Button>
+				</div>
+				<div class="p-2 w-16">
+					<Button :float="true" class="w-full" type="secondary">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+					</Button>
+				</div>
 			</div>
 		</template>
 	</Cards>
@@ -125,6 +174,10 @@
 			<div class="w-full border-b py-2">
 				<h5 class="font-medium mb-1 text-sm md:text-base"><code>bg (String)</code></h5>
 				<p class="text-sm">Class bacground-color if type is custom.</p>
+			</div>
+			<div class="w-full border-b py-2">
+				<h5 class="font-medium mb-1 text-sm md:text-base"><code>float (Boolean)</code></h5>
+				<p class="text-sm">Rounded button.</p>
 			</div>
 			<div class="w-full border-b py-2">
 				<h5 class="font-medium mb-1 text-sm md:text-base"><code>role (String)</code></h5>

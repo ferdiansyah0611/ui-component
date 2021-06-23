@@ -27,7 +27,7 @@
 					</Dropdown>
 				</div>
 				<div class="p-2 w-full md:w-1/4">
-					<Dropdown txt="Dropdown" type="danger">
+					<Dropdown animate="scale" txt="Dropdown" type="danger">
 						<router-link to="/" class="p-2 w-full hover:bg-gray-100 transition-all duration-200 z-10 bg-white">
 							Link 1
 						</router-link>
@@ -40,7 +40,7 @@
 					</Dropdown>
 				</div>
 				<div class="p-2 w-full md:w-1/4">
-					<Dropdown txt="Dropdown" type="success">
+					<Dropdown animate="scale" txt="Dropdown" type="success">
 						<router-link to="/" class="p-2 w-full hover:bg-gray-100 transition-all duration-200 z-10 bg-white">
 							Link 1
 						</router-link>
@@ -53,7 +53,7 @@
 					</Dropdown>
 				</div>
 				<div class="p-2 w-full md:w-1/4">
-					<Dropdown txt="Dropdown" type="warning">
+					<Dropdown animate="scale" txt="Dropdown" type="warning">
 						<router-link to="/" class="p-2 w-full hover:bg-gray-100 transition-all duration-200 z-10 bg-white">
 							Link 1
 						</router-link>
