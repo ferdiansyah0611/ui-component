@@ -1,5 +1,20 @@
 <template>
-	<textarea :disabled="disabled ? true: false" :placeholder="place" @input="handle" class="border p-3 focus:outline-none w-full focus:ring focus:ring-gray-100" :style="{minHeight: min ? min: 40 + 'px', maxHeight: max ? max: 100 + 'px'}"></textarea>
+	<textarea
+		v-if="ui"
+		:disabled="disabled ? true: false"
+		:placeholder="place"
+		@input="handle"
+		:class="color ? 'focus:border-' + color + ' border-b p-3 outline-none w-full transition-all duration-500' : 'border-b focus:border-blue-400 p-3 outline-none w-full transition-all duration-500'"
+		:style="{minHeight: min ? min: 40 + 'px', maxHeight: max ? max: 100 + 'px'}"
+	></textarea>
+	<textarea
+		v-else
+		:disabled="disabled ? true: false"
+		:placeholder="place"
+		@input="handle"
+		class="border p-3 focus:outline-none w-full focus:ring focus:ring-gray-100"
+		:style="{minHeight: min ? min: 40 + 'px', maxHeight: max ? max: 100 + 'px'}"
+	></textarea>
 	<p v-if="help" class="text-sm p-1 text-gray-500">{{help}}</p>
 </template>
 <script>
@@ -31,6 +46,12 @@ export default{
 			type: String,
 			required: false
 		},
+		ui: {
+			required: false
+		},
+		color: {
+			required: false
+		}
 	},
 	data(){
 		return{
