@@ -7,7 +7,7 @@ const list = [
 	{type: 'danger', cls: 'bg-red-500 text-white focus:outline-none focus:ring-4 focus:ring-red-200 text-center hover:bg-red-600 transition-all duration-500'},
 	{type: 'success', cls: 'bg-green-500 text-white focus:outline-none focus:ring-4 focus:ring-green-200 text-center hover:bg-green-600 transition-all duration-500'},
 	{type: 'warning', cls: 'bg-yellow-500 text-white focus:outline-none focus:ring-4 focus:ring-yellow-200 text-center hover:bg-yellow-600 transition-all duration-500'},
-	{type: 'dark', cls: 'bg-black text-white focus:outline-none focus:ring-4 focus:ring-gray-600 hover:bg-gray-700 transition-all duration-500'},
+	{type: 'dark', cls: 'bg-black text-white focus:outline-none focus:ring-4 focus:ring-gray-300 hover:bg-gray-700 transition-all duration-500'},
 	{type: 'light', cls: 'bg-white text-black focus:outline-none focus:ring-4 focus:ring-gray-100 text-center hover:bg-gray-200 transition-all duration-500'},
 	{type: 'secondary', cls: 'bg-gray-200 text-black focus:outline-none focus:ring-4 focus:ring-gray-200 border border-gray-100 text-center hover:bg-gray-300 transition-all duration-500'},
 	{type: 'outline-primary', cls: 'bg-white text-black focus:outline-none focus:ring-4 focus:ring-blue-200 focus:bg-blue-500 hover:bg-blue-500 border-2 hover:text-white focus:text-white border-blue-500 text-center transition-all duration-500'},
@@ -48,10 +48,13 @@ export default{
 		role: {
 			type: String, required: false
 		},
+		float: {
+			type: String, required: false
+		},
 	},
 	data(){
 		return{
-			cls: ' text-center focus:outline-none'
+			cls: ' text-center focus:outline-none transition-all duration-500'
 		}
 	},
 	beforeMount(){
@@ -76,9 +79,12 @@ export default{
 					}
 				}
 			}
+			if(this.float){
+				this.cls = this.cls + ' rounded-full'
+			}
 			if(this.config){
 				if(this.config.noBorder) {
-					this.cls = this.cls.replace('border', 'border-0')
+					this.cls = this.cls + ' border-0'
 				}
 				if(this.config.p) {
 					this.cls = this.cls.replace(/p-[0-9]+/, this.config.p)
