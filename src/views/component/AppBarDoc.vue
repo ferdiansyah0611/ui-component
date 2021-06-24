@@ -9,7 +9,7 @@
 	</Cards>
 	<Cards class="mt-2" type="light">
 		<template v-slot:head>
-			<h5 class="text-2xl"># Navbar & Tabs</h5>
+			<h5 class="text-2xl"># Example 1</h5>
 		</template>
 		<template v-slot:content>
 			<Tabs :no-padding="true" post="x" type="secondary" default="display" :title="[{name: 'display', title: 'Display'}, {name: 'code', title: 'Source Code'}]">
@@ -39,30 +39,34 @@
 								</div>
 							</template>
 						</Navbar>
-						<div class="w-full pt-10 px-2">
-							<Tabs :no-padding="true" post="x" type="light" default="tab-1" :title="[{name: 'tab-1', title: 'Title 1'}, {name: 'tab-2', title: 'Title 2'}]">
-								<template v-slot:tab-1>
-									<div class="h-48 overflow-auto p-4">
-										<p v-for="d in 10" v-bind:key="d">
-											Lorem ipsum dolor sit amet consectetur adipisicing elit.
-											Esse eos recusandae aut voluptates, sunt molestiae id quam
-											nesciunt numquam nulla quod eveniet aperiam, voluptate ea illo provident, 
-											molestias magnam aliquam!
+						<div class="w-full py-10 px-2 flex flex-wrap">
+							<div class="w-full sm:w-1/2 lg:w-1/4 p-1" v-for="d in 8" v-bind:key="d">
+								<Cards class="border" type="light">
+									<template v-slot:head>
+										<h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h5>
+									</template>
+									<template v-slot:content>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Ea saepe quasi obcaecati, 
+											repellat nisi iure, inventore cupiditate quibusdam ratione esse laborum iste exercitationem 
+											autem modi. Totam sit, adipisci veritatis repellat!
 										</p>
-									</div>
-								</template>
-								<template v-slot:tab-2>
-									<div class="h-48 overflow-auto p-4">
-										<p v-for="d in 10" v-bind:key="d">
-											Lorem ipsum dolor sit amet consectetur adipisicing elit.
-											Qui explicabo nesciunt nisi dicta nihil maiores nemo consectetur eum.
-											Recusandae autem numquam odio quis modi dignissimos. Corporis cumque 
-											possimus eum tempore?
-										</p>
-									</div>
-								</template>
-							</Tabs>
+									</template>
+									<template v-slot:footer>
+										<Button type="primary">Like</Button>
+										<Button type="danger">Comment</Button>
+									</template>
+								</Cards>
+							</div>
 						</div>
+						<Footer pos="default" color="bg-gray-100">
+							<template v-slot:left>
+								<p class="p-4 text-black">&copy; {{new Date().getFullYear()}} Company</p>
+							</template>
+							<template v-slot:right>
+								<a href="/" class="p-4 text-black hover:bg-gray-200">Privacy & Policy</a>
+							</template>
+						</Footer>
 					</div>
 				</template>
 				<template v-slot:code>
@@ -80,30 +84,60 @@ export default{
 		return{
 			example: {
 				one: 
-`<pre class="html5" style="font-family:monospace;"><span style="color: #009900;">&lt;Navbar :<span style="color: #000066;">type</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;primary&quot;</span>&gt;</span>
-	<span style="color: #009900;">&lt;template v-slot:navs&gt;</span>
-		<span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">div</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;w-1/2 flex justify-start&quot;</span>&gt;</span>
-			<span style="color: #009900;">&lt;router-<span style="color: #000066;">link</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;p-4 font-bold hover:bg-blue-600&quot;</span> to<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;/&quot;</span>&gt;</span>My App<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>router-link&gt;</span>
-			<span style="color: #009900;">&lt;router-<span style="color: #000066;">link</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;p-4 font-bold hover:bg-blue-600&quot;</span> to<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;/&quot;</span>&gt;</span>Home<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>router-link&gt;</span>
-			<span style="color: #009900;">&lt;router-<span style="color: #000066;">link</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;p-4 font-bold hover:bg-blue-600&quot;</span> to<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;/&quot;</span>&gt;</span>About<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>router-link&gt;</span>
-		<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">div</span>&gt;</span>
-		<span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">div</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;w-1/2 flex justify-end&quot;</span>&gt;</span>
-			<span style="color: #009900;">&lt;router-<span style="color: #000066;">link</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;p-4 font-bold hover:bg-blue-600&quot;</span> to<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;/&quot;</span>&gt;</span>Github<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>router-link&gt;</span>
-		<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">div</span>&gt;</span>
-	<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span>
-	<span style="color: #009900;">&lt;template v-slot:mobile&gt;</span>
-		<span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">div</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;w-1/2 flex justify-start&quot;</span>&gt;</span>
-			<span style="color: #009900;">&lt;router-<span style="color: #000066;">link</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;p-4 font-bold hover:bg-blue-600&quot;</span> to<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;/&quot;</span>&gt;</span>My App<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>router-link&gt;</span>
-		<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">div</span>&gt;</span>
-		<span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">div</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;w-1/2 flex justify-end&quot;</span>&gt;</span>
-			<span style="color: #009900;">&lt;router-<span style="color: #000066;">link</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;p-4 font-bold hover:bg-blue-600&quot;</span> to<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;/&quot;</span>&gt;</span>
-				<span style="color: #009900;">&lt;svg xmlns<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;http://www.w3.org/2000/svg&quot;</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;h-6 w-6&quot;</span> fill<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;none&quot;</span> viewBox<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;0 0 24 24&quot;</span> stroke<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;currentColor&quot;</span>&gt;</span>
-					<span style="color: #009900;">&lt;path stroke-linecap<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;round&quot;</span> stroke-linejoin<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;round&quot;</span> stroke-<span style="color: #000066;">width</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;2&quot;</span> d<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;M4 6h16M4 12h16M4 18h16&quot;</span> <span style="color: #66cc66;">/</span>&gt;</span>
-				<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>svg&gt;</span>
-			<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>router-link&gt;</span>
-		<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">div</span>&gt;</span>
-	<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span>
-<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>Navbar&gt;</span></pre>`
+`<pre class="javascript" style="font-family:monospace;"><span style="color: #339933;">&lt;</span>div <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;w-full&quot;</span><span style="color: #339933;">&gt;</span>
+	<span style="color: #339933;">&lt;</span>Navbar type<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;light&quot;</span><span style="color: #339933;">&gt;</span>
+		<span style="color: #339933;">&lt;</span>template v<span style="color: #339933;">-</span>slot<span style="color: #339933;">:</span>navs<span style="color: #339933;">&gt;</span>
+			<span style="color: #339933;">&lt;</span>div <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;w-1/2 flex justify-start&quot;</span><span style="color: #339933;">&gt;</span>
+				<span style="color: #339933;">&lt;</span>span <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;p-6 font-bold&quot;</span><span style="color: #339933;">&gt;</span>Blog<span style="color: #339933;">&lt;/</span>span<span style="color: #339933;">&gt;</span>
+				<span style="color: #339933;">&lt;</span>router<span style="color: #339933;">-</span>link <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;p-6 font-bold hover:bg-gray-200 transition-all duration-500&quot;</span> to<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;/&quot;</span><span style="color: #339933;">&gt;</span>Home<span style="color: #339933;">&lt;/</span>router<span style="color: #339933;">-</span>link<span style="color: #339933;">&gt;</span>
+				<span style="color: #339933;">&lt;</span>router<span style="color: #339933;">-</span>link <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;p-6 font-bold hover:bg-gray-200 transition-all duration-500&quot;</span> to<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;/&quot;</span><span style="color: #339933;">&gt;</span>Popular<span style="color: #339933;">&lt;/</span>router<span style="color: #339933;">-</span>link<span style="color: #339933;">&gt;</span>
+			<span style="color: #339933;">&lt;/</span>div<span style="color: #339933;">&gt;</span>
+			<span style="color: #339933;">&lt;</span>div <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;w-1/2 flex justify-end&quot;</span><span style="color: #339933;">&gt;</span>
+				<span style="color: #339933;">&lt;</span>router<span style="color: #339933;">-</span>link <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;p-6 font-bold hover:bg-gray-200 transition-all duration-500&quot;</span> to<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;/&quot;</span><span style="color: #339933;">&gt;</span>Login<span style="color: #339933;">&lt;/</span>router<span style="color: #339933;">-</span>link<span style="color: #339933;">&gt;</span>
+			<span style="color: #339933;">&lt;/</span>div<span style="color: #339933;">&gt;</span>
+		<span style="color: #339933;">&lt;/</span>template<span style="color: #339933;">&gt;</span>
+		<span style="color: #339933;">&lt;</span>template v<span style="color: #339933;">-</span>slot<span style="color: #339933;">:</span>mobile<span style="color: #339933;">&gt;</span>
+			<span style="color: #339933;">&lt;</span>div <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;w-1/2 flex justify-start&quot;</span><span style="color: #339933;">&gt;</span>
+				<span style="color: #339933;">&lt;</span>router<span style="color: #339933;">-</span>link <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;p-6 font-bold hover:bg-gray-200 transition-all duration-500&quot;</span> to<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;/&quot;</span><span style="color: #339933;">&gt;</span>Blog<span style="color: #339933;">&lt;/</span>router<span style="color: #339933;">-</span>link<span style="color: #339933;">&gt;</span>
+			<span style="color: #339933;">&lt;/</span>div<span style="color: #339933;">&gt;</span>
+			<span style="color: #339933;">&lt;</span>div <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;w-1/2 flex justify-end&quot;</span><span style="color: #339933;">&gt;</span>
+				<span style="color: #339933;">&lt;</span>router<span style="color: #339933;">-</span>link <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;p-6 font-bold hover:bg-gray-200 transition-all duration-500&quot;</span> to<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;/&quot;</span><span style="color: #339933;">&gt;</span>
+					<span style="color: #339933;">&lt;</span>svg xmlns<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;http://www.w3.org/2000/svg&quot;</span> <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;h-6 w-6&quot;</span> fill<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;none&quot;</span> viewBox<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;0 0 24 24&quot;</span> stroke<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;currentColor&quot;</span><span style="color: #339933;">&gt;</span>
+						<span style="color: #339933;">&lt;</span>path stroke<span style="color: #339933;">-</span>linecap<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;round&quot;</span> stroke<span style="color: #339933;">-</span>linejoin<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;round&quot;</span> stroke<span style="color: #339933;">-</span>width<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;2&quot;</span> d<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;M4 6h16M4 12h16M4 18h16&quot;</span> <span style="color: #339933;">/&gt;</span>
+					<span style="color: #339933;">&lt;/</span>svg<span style="color: #339933;">&gt;</span>
+				<span style="color: #339933;">&lt;/</span>router<span style="color: #339933;">-</span>link<span style="color: #339933;">&gt;</span>
+			<span style="color: #339933;">&lt;/</span>div<span style="color: #339933;">&gt;</span>
+		<span style="color: #339933;">&lt;/</span>template<span style="color: #339933;">&gt;</span>
+	<span style="color: #339933;">&lt;/</span>Navbar<span style="color: #339933;">&gt;</span>
+	<span style="color: #339933;">&lt;</span>div <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;w-full py-10 px-2 flex flex-wrap&quot;</span><span style="color: #339933;">&gt;</span>
+		<span style="color: #339933;">&lt;</span>div <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;w-full sm:w-1/2 lg:w-1/4 p-1&quot;</span> v<span style="color: #339933;">-</span><span style="color: #000066; font-weight: bold;">for</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;d in 8&quot;</span> v<span style="color: #339933;">-</span>bind<span style="color: #339933;">:</span>key<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;d&quot;</span><span style="color: #339933;">&gt;</span>
+			<span style="color: #339933;">&lt;</span>Cards <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;border&quot;</span> type<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;light&quot;</span><span style="color: #339933;">&gt;</span>
+				<span style="color: #339933;">&lt;</span>template v<span style="color: #339933;">-</span>slot<span style="color: #339933;">:</span>head<span style="color: #339933;">&gt;</span>
+					<span style="color: #339933;">&lt;</span>h5<span style="color: #339933;">&gt;</span>Lorem ipsum<span style="color: #339933;">,</span> dolor sit amet consectetur adipisicing elit.<span style="color: #339933;">&lt;/</span>h5<span style="color: #339933;">&gt;</span>
+				<span style="color: #339933;">&lt;/</span>template<span style="color: #339933;">&gt;</span>
+				<span style="color: #339933;">&lt;</span>template v<span style="color: #339933;">-</span>slot<span style="color: #339933;">:</span>content<span style="color: #339933;">&gt;</span>
+					<span style="color: #339933;">&lt;</span>p<span style="color: #339933;">&gt;</span>
+						Lorem ipsum dolor sit amet<span style="color: #339933;">,</span> consectetur<span style="color: #339933;">,</span> adipisicing elit. <span style="color: #660066;">Ea</span> saepe quasi obcaecati<span style="color: #339933;">,</span> 
+						repellat nisi iure<span style="color: #339933;">,</span> inventore cupiditate quibusdam ratione esse laborum iste exercitationem 
+						autem modi. <span style="color: #660066;">Totam</span> sit<span style="color: #339933;">,</span> adipisci veritatis repellat<span style="color: #339933;">!</span>
+					<span style="color: #339933;">&lt;/</span>p<span style="color: #339933;">&gt;</span>
+				<span style="color: #339933;">&lt;/</span>template<span style="color: #339933;">&gt;</span>
+				<span style="color: #339933;">&lt;</span>template v<span style="color: #339933;">-</span>slot<span style="color: #339933;">:</span>footer<span style="color: #339933;">&gt;</span>
+					<span style="color: #339933;">&lt;</span>Button type<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;primary&quot;</span><span style="color: #339933;">&gt;</span>Like<span style="color: #339933;">&lt;/</span>Button<span style="color: #339933;">&gt;</span>
+					<span style="color: #339933;">&lt;</span>Button type<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;danger&quot;</span><span style="color: #339933;">&gt;</span>Comment<span style="color: #339933;">&lt;/</span>Button<span style="color: #339933;">&gt;</span>
+				<span style="color: #339933;">&lt;/</span>template<span style="color: #339933;">&gt;</span>
+			<span style="color: #339933;">&lt;/</span>Cards<span style="color: #339933;">&gt;</span>
+		<span style="color: #339933;">&lt;/</span>div<span style="color: #339933;">&gt;</span>
+	<span style="color: #339933;">&lt;/</span>div<span style="color: #339933;">&gt;</span>
+	<span style="color: #339933;">&lt;</span>Footer pos<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;default&quot;</span> color<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;bg-gray-100&quot;</span><span style="color: #339933;">&gt;</span>
+		<span style="color: #339933;">&lt;</span>template v<span style="color: #339933;">-</span>slot<span style="color: #339933;">:</span>left<span style="color: #339933;">&gt;</span>
+			<span style="color: #339933;">&lt;</span>p <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;p-4 text-black&quot;</span><span style="color: #339933;">&gt;&amp;</span>copy<span style="color: #339933;">;</span> <span style="color: #009900;">&#123;</span><span style="color: #009900;">&#123;</span><span style="color: #000066; font-weight: bold;">new</span> <span style="">Date</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">getFullYear</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#125;</span> Company<span style="color: #339933;">&lt;/</span>p<span style="color: #339933;">&gt;</span>
+		<span style="color: #339933;">&lt;/</span>template<span style="color: #339933;">&gt;</span>
+		<span style="color: #339933;">&lt;</span>template v<span style="color: #339933;">-</span>slot<span style="color: #339933;">:</span>right<span style="color: #339933;">&gt;</span>
+			<span style="color: #339933;">&lt;</span>a href<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;/&quot;</span> <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;p-4 text-black hover:bg-gray-200&quot;</span><span style="color: #339933;">&gt;</span>Privacy <span style="color: #339933;">&amp;</span> Policy<span style="color: #339933;">&lt;/</span>a<span style="color: #339933;">&gt;</span>
+		<span style="color: #339933;">&lt;/</span>template<span style="color: #339933;">&gt;</span>
+	<span style="color: #339933;">&lt;/</span>Footer<span style="color: #339933;">&gt;</span>
+<span style="color: #339933;">&lt;/</span>div<span style="color: #339933;">&gt;</span></pre>`
 			},
 			nav: [
 				{name: 'primary', cls: 'p-4 font-bold hover:bg-blue-600'},

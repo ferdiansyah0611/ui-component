@@ -21,6 +21,7 @@
 					</template>
 					<template v-slot:link>
 						<router-link class="p-3 text-black hover:bg-gray-200 w-full text-center" to="/">Home</router-link>
+						<router-link class="p-3 text-black hover:bg-gray-200 w-full text-center" to="/docs/getting-started">Getting Started</router-link>
 						<Collapse border="no-border" class="w-full font-medium text-center" type="light" title="Component">
 							<router-link v-for="(d,i) in link.component" v-bind:key="i" :to="{path: d.to}" class="p-3 py-1 w-full hover:bg-gray-200 transition-all duration-300" active-class="bg-gray-100">{{d.text}}</router-link>
 						</Collapse>
